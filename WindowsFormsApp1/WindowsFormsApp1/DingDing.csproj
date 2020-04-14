@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58EEDCE7-63C8-4AD5-9830-554A8A61F1E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>D:\下载\CSkin 16.1.14.3\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DingDing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DingDing.Designer.cs">
+      <DependentUpon>DingDing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGongZuo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmGongZuo.Designer.cs">
+      <DependentUpon>FrmGongZuo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKaoQin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmKaoQin.Designer.cs">
+      <DependentUpon>FrmKaoQin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLiaoTian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmLiaoTian.Designer.cs">
+      <DependentUpon>FrmLiaoTian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChuShi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmChuShi.Designer.cs">
+      <DependentUpon>FrmChuShi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQingJia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmQingJia.Designer.cs">
+      <DependentUpon>FrmQingJia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTianJIaHaoYou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTianJIaHaoYou.Designer.cs">
+      <DependentUpon>FrmTianJIaHaoYou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTianJIaQiYe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTianJIaQiYe.Designer.cs">
+      <DependentUpon>FrmTianJIaQiYe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTianJiaXiangXiXingXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTianJiaXiangXiXingXi.Designer.cs">
+      <DependentUpon>FrmTianJiaXiangXiXingXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTianJiaXiangXiXingXi1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTianJiaXiangXiXingXi1.Designer.cs">
+      <DependentUpon>FrmTianJiaXiangXiXingXi1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTongXunLu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmTongXunLu.Designer.cs">
+      <DependentUpon>FrmTongXunLu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTongXunXiangXiXingXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTongXunXiangXiXingXi.Designer.cs">
+      <DependentUpon>FrmTongXunXiangXiXingXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTongXunXiangXiXingXi1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTongXunXiangXiXingXi1.Designer.cs">
+      <DependentUpon>FrmTongXunXiangXiXingXi1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmXiaoTouXiang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmXiaoTouXiang.Designer.cs">
+      <DependentUpon>FrmXiaoTouXiang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmXinXi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmXinXi.Designer.cs">
+      <DependentUpon>FrmXinXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmXuanRen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmXuanRen.Designer.cs">
+      <DependentUpon>FrmXuanRen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuiHuaLieBiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HuiHuaLieBiao.Designer.cs">
+      <DependentUpon>HuiHuaLieBiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuiHuaLieBiaoQunZu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HuiHuaLieBiaoQunZu.Designer.cs">
+      <DependentUpon>HuiHuaLieBiaoQunZu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysMain.Designer.cs">
+      <DependentUpon>SysMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeBieGuanZhu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeBieGuanZhu.Designer.cs">
+      <DependentUpon>TeBieGuanZhu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongXunGongSi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongXunGongSi.Designer.cs">
+      <DependentUpon>TongXunGongSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongXunHaoYou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongXunHaoYou.Designer.cs">
+      <DependentUpon>TongXunHaoYou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongXunHaoYou1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongXunHaoYou1.Designer.cs">
+      <DependentUpon>TongXunHaoYou1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongXunLieBiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongXunLieBiao.Designer.cs">
+      <DependentUpon>TongXunLieBiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongXunLieBiaoGongSi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongXunLieBiaoGongSi.Designer.cs">
+      <DependentUpon>TongXunLieBiaoGongSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongXunQunZu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongXunQunZu.Designer.cs">
+      <DependentUpon>TongXunQunZu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TouXiang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TouXiang.Designer.cs">
+      <DependentUpon>TouXiang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WoDeHaoYou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WoDeHaoYou.Designer.cs">
+      <DependentUpon>WoDeHaoYou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WoDeQingZu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WoDeQingZu.Designer.cs">
+      <DependentUpon>WoDeQingZu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinDeHaoYou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XinDeHaoYou.Designer.cs">
+      <DependentUpon>XinDeHaoYou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuanZeChengYuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XuanZeChengYuan.Designer.cs">
+      <DependentUpon>XuanZeChengYuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuanZeYongHu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XuanZeYongHu.Designer.cs">
+      <DependentUpon>XuanZeYongHu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuiGaiYhMiMa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuiGaiYhMiMa.Designer.cs">
+      <DependentUpon>XuiGaiYhMiMa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YongHunXiangXiXinXi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="YongHunXiangXiXinXi.Designer.cs">
+      <DependentUpon>YongHunXiangXiXinXi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DingDing.resx">
+      <DependentUpon>DingDing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGongZuo.resx">
+      <DependentUpon>FrmGongZuo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaoQin.resx">
+      <DependentUpon>FrmKaoQin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLiaoTian.resx">
+      <DependentUpon>FrmLiaoTian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChuShi.resx">
+      <DependentUpon>FrmChuShi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQingJia.resx">
+      <DependentUpon>FrmQingJia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTianJIaHaoYou.resx">
+      <DependentUpon>FrmTianJIaHaoYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTianJIaQiYe.resx">
+      <DependentUpon>FrmTianJIaQiYe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTianJiaXiangXiXingXi.resx">
+      <DependentUpon>FrmTianJiaXiangXiXingXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTianJiaXiangXiXingXi1.resx">
+      <DependentUpon>FrmTianJiaXiangXiXingXi1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTongXunLu.resx">
+      <DependentUpon>FrmTongXunLu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTongXunXiangXiXingXi.resx">
+      <DependentUpon>FrmTongXunXiangXiXingXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTongXunXiangXiXingXi1.resx">
+      <DependentUpon>FrmTongXunXiangXiXingXi1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmXiaoTouXiang.resx">
+      <DependentUpon>FrmXiaoTouXiang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmXinXi.resx">
+      <DependentUpon>FrmXinXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmXuanRen.resx">
+      <DependentUpon>FrmXuanRen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuiHuaLieBiao.resx">
+      <DependentUpon>HuiHuaLieBiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuiHuaLieBiaoQunZu.resx">
+      <DependentUpon>HuiHuaLieBiaoQunZu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysMain.resx">
+      <DependentUpon>SysMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TeBieGuanZhu.resx">
+      <DependentUpon>TeBieGuanZhu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongXunGongSi.resx">
+      <DependentUpon>TongXunGongSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongXunHaoYou.resx">
+      <DependentUpon>TongXunHaoYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongXunHaoYou1.resx">
+      <DependentUpon>TongXunHaoYou1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongXunLieBiao.resx">
+      <DependentUpon>TongXunLieBiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongXunLieBiaoGongSi.resx">
+      <DependentUpon>TongXunLieBiaoGongSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongXunQunZu.resx">
+      <DependentUpon>TongXunQunZu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouXiang.resx">
+      <DependentUpon>TouXiang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WoDeHaoYou.resx">
+      <DependentUpon>WoDeHaoYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WoDeQingZu.resx">
+      <DependentUpon>WoDeQingZu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XinDeHaoYou.resx">
+      <DependentUpon>XinDeHaoYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuanZeChengYuan.resx">
+      <DependentUpon>XuanZeChengYuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuanZeYongHu.resx">
+      <DependentUpon>XuanZeYongHu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuiGaiYhMiMa.resx">
+      <DependentUpon>XuiGaiYhMiMa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YongHunXiangXiXinXi.resx">
+      <DependentUpon>YongHunXiangXiXinXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5bc2c1931bff5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办管理 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\钉钉.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工作on %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工作on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通讯录 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通讯录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\消息 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\消息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\邮件 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\邮件.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办事项 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办事项.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工作_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工作_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通讯录 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通讯录1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\消息 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\消息1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\邮件 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\邮件1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\邮箱 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\邮箱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办事项 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\代办事项1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程- %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日程-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
