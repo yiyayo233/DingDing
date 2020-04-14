@@ -18,15 +18,24 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        static string strcon = "Data Source=.;Initial Catalog=DingDing;Integrated Security=True";
-        DataSet dataSet = new DataSet();
-        SqlDataAdapter adapter = new SqlDataAdapter();
-
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
 
+        /// <summary>
+        /// 公司id
+        /// </summary>
         public string txt_GongSild = "";
+
+        /// <summary>
+        /// 公司昵称
+        /// </summary>
         public string txt_GongSiName = "";
+
+        /// <summary>
+        /// 公司头像
+        /// </summary>
         public string txt_GongSiTx = "";
 
         #region 改变panel1背景颜色
@@ -112,6 +121,9 @@ namespace WindowsFormsApp1
 
 
         #region 显示公司通讯页 按组织架构选择
+        /// <summary>
+        /// 显示公司通讯页
+        /// </summary>
         public void ShowTongXunGongSi() {
             try
             {
@@ -165,6 +177,9 @@ namespace WindowsFormsApp1
         }
 
         #region 初始化控件
+        /// <summary>
+        /// 初始化控件
+        /// </summary>
         public void ChuShiHua() {
             foreach (var lb in panel1.Controls)
             {

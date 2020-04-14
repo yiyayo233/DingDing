@@ -23,6 +23,11 @@ namespace 钉钉
         SqlDataAdapter adapter = new SqlDataAdapter();
 
         #region 初始化
+        /// <summary>
+        /// 初始化下拉列表
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 钉钉_Load(object sender, EventArgs e)
         {
             txt_haoma.Text = "请输入手机号";
@@ -93,6 +98,11 @@ namespace 钉钉
         #endregion
 
         #region 登录
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton1_Click(object sender, EventArgs e)
         {
             if (this.txt_haoma.Text.Trim() == "请输入手机号")
@@ -147,11 +157,20 @@ namespace 钉钉
         #endregion
 
         #region 两大金刚键
+        /// <summary>
+        /// 关闭
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton9_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
-
+        /// <summary>
+        /// 最小化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton8_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

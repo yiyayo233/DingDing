@@ -53,29 +53,16 @@ namespace WinformBubble
         }
 
         #region 界面重绘
-
         /// <summary>
-        /// 绘制气泡左上角小箭头
+        /// 绘制气泡
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Item_Paint(object sender, PaintEventArgs e)
         {
-
-
-
-            //自己发送的消息箭头在右上角
+            //自己发送
             if (messageType == MessageType.send)
             {
-
-                /*Color color = System.Drawing.Color.LightGray;
-                skinPanel1.BackColor = color;
-                Brush brushes = new SolidBrush(color);
-                Point[] point = new Point[3];
-                point[0] = new Point(WIDTH - 5, 10);
-                point[1] = new Point(WIDTH - 15, 10);
-                point[2] = new Point(WIDTH - 15, 20);
-                e.Graphics.FillPolygon(brushes, point);*/
                 this.touXiangZJ.Visible = true;
             }
             else
@@ -83,6 +70,7 @@ namespace WinformBubble
                 this.skinPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                 this.skinPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                 this.touXiangBG.Visible = true;
+                //判断是对群发还是对用户发信息
                 if (Text_duiHuaRenName == "TFDNDSFJIF")
                 {
                     this.touXiangBG.Top = 21;
@@ -92,14 +80,6 @@ namespace WinformBubble
                     this.DuiHuaRenName.Text = Text_duiHuaRenName;
                     this.DuiHuaRenName.Visible = true;
                 }
-                
-                /*Color color = System.Drawing.Color.LightGray;
-                Brush brushes = new SolidBrush(color);
-                Point[] point = new Point[3];
-                point[0] = new Point(10, 10);
-                point[1] = new Point(20, 10);
-                point[2] = new Point(20, 20);
-                e.Graphics.FillPolygon(brushes, point);*/
             }
         }
         #endregion

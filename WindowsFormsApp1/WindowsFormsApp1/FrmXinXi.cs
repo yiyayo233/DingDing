@@ -22,9 +22,19 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
 
+        /// <summary>
+        /// 好友昵称
+        /// </summary>
         public string txt_HaoYouName = "";
+
+        /// <summary>
+        /// 好友id
+        /// </summary>
         public string chaZhaoYhld = "";
 
         private void FrmXinXi_Load(object sender, EventArgs e)
@@ -44,13 +54,13 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 显示聊天窗口
+        /*#region 显示聊天窗口
         public void PanelTopV()
         {
             this.PanelTop.Visible = false;
             this.frmLiaoTian1.Visible = true;
         }
-        #endregion
+        #endregion*/
 
         private void ButJiaHao_Click(object sender, EventArgs e)
         {
@@ -59,7 +69,7 @@ namespace WindowsFormsApp1
 
         #region 查询好友、初始化&添加huiHuaLieBiao控件
         /// <summary>
-        /// 查询好友、初始化&添加huiHuaLieBiao控件
+        /// 查询好友、初始化、添加huiHuaLieBiao控件
         /// </summary>
         public void CheckHaoYou()
         {
@@ -165,7 +175,7 @@ namespace WindowsFormsApp1
 
         #region 查询群组、初始化&添加huiHuaLieBiaoQunZu控件
         /// <summary>
-        /// 查询群组、初始化&添加huiHuaLieBiaoQunZu控件
+        /// 查询群组、初始化、添加huiHuaLieBiaoQunZu控件
         /// </summary>
         public void CheckQunZu()
         {
@@ -281,6 +291,10 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 获取时间
+        /// <summary>
+        /// 获取时间
+        /// </summary>
+        /// <returns></returns>
         public string HuoQvShiJian()
         {
             DateTime dateTime = DateTime.Now;
@@ -290,6 +304,10 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 获取日期
+        /// <summary>
+        /// 获取日期
+        /// </summary>
+        /// <returns></returns>
         public string HuoQvRiQi()
         {
             string dateTime = DateTime.Now.ToString();
@@ -301,6 +319,11 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 截取时间
+        /// <summary>
+        /// 截取时间
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
         public string JieQvShiJian(string dateTime)
         {
             DateTime dt = DateTime.Parse(dateTime);
@@ -310,6 +333,11 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 截取日期
+        /// <summary>
+        /// 截取时间
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
         public string JieQvRiQi(string dateTime)
         {
             string time = dateTime.Substring(0, dateTime.IndexOf(" "));
@@ -320,14 +348,23 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 初始化列表
+        /// <summary>
+        /// 初始化会话列表
+        /// </summary>
         public void ChuShiHua() {
-            this.panelHuiHua.Controls.Clear();
+            //清除会话列表的所有控件
+            this.panelHuiHua.Controls.Clear();  
             CheckQunZu();
             CheckHaoYou();
         }
         #endregion
 
         #region 刷新会话列表信息
+        /// <summary>
+        /// 定时刷新会话列表信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             ChuShiHua();

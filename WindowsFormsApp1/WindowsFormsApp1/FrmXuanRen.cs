@@ -11,15 +11,19 @@ using System.Runtime.InteropServices;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// 这个控件可以忽略、暂时没用到
+    /// </summary>
     public partial class FrmXuanRen : Form
     {
-
+        #region 阴影
         private const int CS_DropSHADOW = 0x20000;
         private const int GCL_STYLE = (-26);
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern int SetClassLong(IntPtr hwnd, int nIndex, int dwNewLong);
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern int GetClassLong(IntPtr hwnd, int nIndex);
+        #endregion
 
         public FrmXuanRen()
         {
@@ -33,7 +37,6 @@ namespace WindowsFormsApp1
             this.Close();
         }
         #endregion
-
 
         #region  窗体无边框样式时移动
         bool formMove = false;//窗体是否移动
@@ -85,7 +88,6 @@ namespace WindowsFormsApp1
 
         #endregion
 
-
         /*#region 改变panel4背景颜色
         private void panel4_MouseEnter(object sender, EventArgs e)
         {
@@ -118,7 +120,12 @@ namespace WindowsFormsApp1
         }
         #endregion*/
 
-        #region 显示&隐藏panel10
+        #region 显示、隐藏panel10
+        /// <summary>
+        /// 显示、隐藏panel10
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Txt_Name_MouseClick(object sender, MouseEventArgs e)
         {
             if (this.panel10.Visible == false)

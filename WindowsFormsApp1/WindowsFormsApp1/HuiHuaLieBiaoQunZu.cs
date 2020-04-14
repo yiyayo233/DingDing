@@ -18,12 +18,34 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
 
+        /// <summary>
+        /// 对话群名称
+        /// </summary>
         public string txt_ShouXinName = "";
+
+        /// <summary>
+        /// 信息发送人昵称
+        /// </summary>
         public string txt_FaSongRewn = "";
+
+        /// <summary>
+        /// 信息内容
+        /// </summary>
         public string txt_XiaoXi = "";
+
+        /// <summary>
+        /// 对话时间
+        /// </summary>
         public string duiHuaShiJian = "";
+
+        /// <summary>
+        /// 对话群id
+        /// </summary>
         public string sxld = "";
 
         private void HuiHuaLieBiaoQunZu_Load(object sender, EventArgs e)
@@ -34,7 +56,7 @@ namespace WindowsFormsApp1
         #region 改变 HuiHuaLieBiaoQunZu 背景颜色
         private void HuiHuaLieBiaoQunZu_MouseDown(object sender, MouseEventArgs e)
         {
-            Bai();
+            //Bai();
             ShowFrmLiaoTian();
 
             /*if (this.panel1.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
@@ -69,6 +91,9 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 初始化控件
+        /// <summary>
+        /// 初始化控件
+        /// </summary>
         public void UptedaHuiHuaLieBiaoQunZu()
         {
             foreach (var lb in panel1.Controls)
@@ -112,7 +137,7 @@ namespace WindowsFormsApp1
 
         #region 显示聊天框
         /// <summary>
-        /// 显示聊天框、很关键兄弟
+        /// 显示聊天框
         /// </summary>
         public void ShowFrmLiaoTian()
         {
@@ -175,7 +200,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 把其他的HuiHuaLieBiao变白
+        /*#region 把其他的HuiHuaLieBiao变白
         public void Bai()
         {
             Control control = this.Parent;
@@ -200,6 +225,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        #endregion
+        #endregion*/
     }
 }
