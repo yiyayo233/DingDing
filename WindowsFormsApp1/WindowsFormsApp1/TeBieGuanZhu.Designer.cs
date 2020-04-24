@@ -94,10 +94,10 @@
             // Txt_TopName
             // 
             this.Txt_TopName.AutoSize = true;
-            this.Txt_TopName.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_TopName.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_TopName.Location = new System.Drawing.Point(78, 19);
             this.Txt_TopName.Name = "Txt_TopName";
-            this.Txt_TopName.Size = new System.Drawing.Size(74, 21);
+            this.Txt_TopName.Size = new System.Drawing.Size(74, 22);
             this.Txt_TopName.TabIndex = 6;
             this.Txt_TopName.Text = "特别关注";
             // 

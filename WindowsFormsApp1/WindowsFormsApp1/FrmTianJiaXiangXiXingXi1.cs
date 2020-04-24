@@ -36,13 +36,7 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
-        /// <summary>
-        /// 查找用户id
-        /// </summary>
         public string chaZhaoYhld = "";
 
         private void FrmTianJiaXiangXiXingXi_Load(object sender, EventArgs e)
@@ -109,10 +103,7 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region 初始化窗口
-        /// <summary>
-        /// 初始化窗口
-        /// </summary>
+        #region 初始化窗口FrmTianJiaXiangXiXingXi
         public void UptedFrmTianJiaXiangXiXingXi()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -146,9 +137,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 添加好友
-        /// <summary>
-        /// 添加好友
-        /// </summary>
         public void TianJiaHaoYou()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -169,8 +157,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("TA已成为你的好友，快去和TA打招呼吧！", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 #region 更新列表
-
-                #region 更新我的好友窗口好友列表
                 Control control = paf;
                 string s = control.Name;
                 paf.Yh_ld = Yh_ld;
@@ -198,9 +184,31 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
-                #endregion
+                /*foreach (var bl in control.Controls)
+                {
+                    if (bl is Panel) 
+                    {
+                        Panel panel = bl as Panel;
+                        if (panel.Name == "panel1")
+                        {
+                            foreach (var bl1 in panel.Controls)
+                            {
+                                if (bl1 is Panel)
+                                {
+                                    WoDeHaoYou woDeHaoYou = bl1 as WoDeHaoYou;
+                                    if (woDeHaoYou.Name == "woDeHaoYou1")
+                                    {
+                                        Type pageType1 = woDeHaoYou.GetType();
+                                        //父页面的方法名
+                                        MethodInfo mi1 = pageType1.GetMethod("CheckHaoYou");
+                                        mi1.Invoke(woDeHaoYou, null);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }*/
 
-                #region 更新消息窗口会话列表
                 Control control1 = paf.Parent.Parent.Parent;    //
                 string s1 = control1.Name;
                 paf.Yh_ld = Yh_ld;
@@ -218,7 +226,6 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
-                #endregion
 
                 #endregion
 

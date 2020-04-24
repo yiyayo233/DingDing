@@ -169,6 +169,7 @@
             this.Controls.Add(this.skinPanel1);
             this.Name = "FrmGongZuo";
             this.Size = new System.Drawing.Size(192, 82);
+            this.Load += new System.EventHandler(this.FrmGongZuo_Load);
             this.skinPanel1.ResumeLayout(false);
             this.panelQingJIa.ResumeLayout(false);
             this.panelQingJIa.PerformLayout();

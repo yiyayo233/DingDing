@@ -193,10 +193,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label5.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label5.Location = new System.Drawing.Point(74, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 21);
+            this.label5.Size = new System.Drawing.Size(74, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "创建团队";
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel24_MouseDown);
@@ -282,10 +282,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label3.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label3.Location = new System.Drawing.Point(74, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 21);
+            this.label3.Size = new System.Drawing.Size(74, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "我的群组";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel14_MouseDown);
@@ -371,10 +371,10 @@
             // Txt_Name
             // 
             this.Txt_Name.AutoSize = true;
-            this.Txt_Name.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_Name.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_Name.Location = new System.Drawing.Point(74, 22);
             this.Txt_Name.Name = "Txt_Name";
-            this.Txt_Name.Size = new System.Drawing.Size(74, 21);
+            this.Txt_Name.Size = new System.Drawing.Size(74, 22);
             this.Txt_Name.TabIndex = 5;
             this.Txt_Name.Text = "我的好友";
             this.Txt_Name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);

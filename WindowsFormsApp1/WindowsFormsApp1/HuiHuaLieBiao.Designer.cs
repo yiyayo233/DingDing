@@ -116,11 +116,11 @@
             // 
             this.Txt_DuiHuaShiJian.AutoSize = true;
             this.Txt_DuiHuaShiJian.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Txt_DuiHuaShiJian.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.Txt_DuiHuaShiJian.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.Txt_DuiHuaShiJian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(128)))), ((int)(((byte)(130)))));
-            this.Txt_DuiHuaShiJian.Location = new System.Drawing.Point(189, 10);
+            this.Txt_DuiHuaShiJian.Location = new System.Drawing.Point(188, 10);
             this.Txt_DuiHuaShiJian.Name = "Txt_DuiHuaShiJian";
-            this.Txt_DuiHuaShiJian.Size = new System.Drawing.Size(50, 20);
+            this.Txt_DuiHuaShiJian.Size = new System.Drawing.Size(51, 20);
             this.Txt_DuiHuaShiJian.TabIndex = 27;
             this.Txt_DuiHuaShiJian.Text = "label1";
             this.Txt_DuiHuaShiJian.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HuiHuaLieBiao_MouseDown);
@@ -150,11 +150,11 @@
             // Txt_XiaoXi1
             // 
             this.Txt_XiaoXi1.AutoSize = true;
-            this.Txt_XiaoXi1.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.Txt_XiaoXi1.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.Txt_XiaoXi1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(128)))), ((int)(((byte)(130)))));
             this.Txt_XiaoXi1.Location = new System.Drawing.Point(75, 38);
             this.Txt_XiaoXi1.Name = "Txt_XiaoXi1";
-            this.Txt_XiaoXi1.Size = new System.Drawing.Size(50, 20);
+            this.Txt_XiaoXi1.Size = new System.Drawing.Size(51, 20);
             this.Txt_XiaoXi1.TabIndex = 29;
             this.Txt_XiaoXi1.Text = "label1";
             this.Txt_XiaoXi1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HuiHuaLieBiao_MouseDown);
@@ -164,10 +164,10 @@
             // Txt_ShouXinName1
             // 
             this.Txt_ShouXinName1.AutoSize = true;
-            this.Txt_ShouXinName1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_ShouXinName1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_ShouXinName1.Location = new System.Drawing.Point(75, 13);
             this.Txt_ShouXinName1.Name = "Txt_ShouXinName1";
-            this.Txt_ShouXinName1.Size = new System.Drawing.Size(90, 21);
+            this.Txt_ShouXinName1.Size = new System.Drawing.Size(90, 22);
             this.Txt_ShouXinName1.TabIndex = 28;
             this.Txt_ShouXinName1.Text = "对话人名称";
             this.Txt_ShouXinName1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HuiHuaLieBiao_MouseDown);

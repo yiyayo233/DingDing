@@ -17,35 +17,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
 
-        /// <summary>
-        /// 对话人昵称
-        /// </summary>
         public string txt_ShouXinName = "";
-
-        /// <summary>
-        /// 对话内容
-        /// </summary>
         public string txt_XiaoXi = "";
-
-        /// <summary>
-        /// 对话时间
-        /// </summary>
         public string duiHuaShiJian = "";
-
-        /// <summary>
-        /// 对话人id
-        /// </summary>
         public string sxld = "";
 
         #region 改变 HuiHuaLieBiao 背景颜色
         private void HuiHuaLieBiao_MouseDown(object sender, MouseEventArgs e)
         {
-            //Bai();
+            Bai();
             ShowFrmLiaoTian();
 
             /*if (this.panel1.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
@@ -85,9 +67,6 @@ namespace WindowsFormsApp1
         }
 
         #region 初始化控件
-        /// <summary>
-        /// 初始化控件
-        /// </summary>
         public void UptedaHuiHuaLieBiao()
         {
             foreach (var lb in panel1.Controls)
@@ -116,7 +95,7 @@ namespace WindowsFormsApp1
 
         #region 显示聊天框
         /// <summary>
-        /// 显示聊天框
+        /// 显示聊天框、很关键兄弟
         /// </summary>
         public void ShowFrmLiaoTian() {
             //获得父页面
@@ -178,7 +157,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        /*#region 把其他的HuiHuaLieBiao变白
+        #region 把其他的HuiHuaLieBiao变白
         public void Bai() {
             Control control = this.Parent;
             string s = control.Name;
@@ -202,7 +181,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        #endregion*/
+        #endregion
 
         
     }

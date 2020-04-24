@@ -32,14 +32,14 @@
             this.TopPanelGsName = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Txt_Name = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelAll = new System.Windows.Forms.Panel();
             this.RadioButtonAll = new CCWin.SkinControl.SkinRadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.xuanZeYongHu1 = new WindowsFormsApp1.XuanZeYongHu();
             this.TopPanelGsName.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelAll.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanelGsName
@@ -67,13 +67,26 @@
             this.Txt_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Txt_Name.AutoSize = true;
             this.Txt_Name.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Txt_Name.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_Name.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_Name.Location = new System.Drawing.Point(24, 6);
             this.Txt_Name.Name = "Txt_Name";
-            this.Txt_Name.Size = new System.Drawing.Size(74, 21);
+            this.Txt_Name.Size = new System.Drawing.Size(74, 22);
             this.Txt_Name.TabIndex = 6;
             this.Txt_Name.Text = "公司名称";
             this.Txt_Name.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
             // 
             // panelAll
             // 
@@ -111,19 +124,6 @@
             this.RadioButtonAll.MouseEnter += new System.EventHandler(this.panelAll_MouseEnter);
             this.RadioButtonAll.MouseLeave += new System.EventHandler(this.panelAll_MouseLeave);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
-            // 
             // xuanZeYongHu1
             // 
             this.xuanZeYongHu1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -145,9 +145,9 @@
             this.TopPanelGsName.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelAll.ResumeLayout(false);
             this.panelAll.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

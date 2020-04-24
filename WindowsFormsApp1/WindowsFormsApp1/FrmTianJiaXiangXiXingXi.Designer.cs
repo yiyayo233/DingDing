@@ -33,17 +33,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ButFaXiaoXi = new CCWin.SkinControl.SkinButton();
             this.BeiZhu = new CCWin.SkinControl.SkinTextBox();
-            this.HyName2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.HyName = new System.Windows.Forms.Label();
-            this.skinButton9 = new CCWin.SkinControl.SkinButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.Hyld = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.HyName2 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.skinButton9 = new CCWin.SkinControl.SkinButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.HyName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.skinPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +75,7 @@
             this.ButFaXiaoXi.DownBack = null;
             this.ButFaXiaoXi.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.ButFaXiaoXi.FadeGlow = false;
-            this.ButFaXiaoXi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButFaXiaoXi.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.ButFaXiaoXi.ForeColor = System.Drawing.Color.White;
             this.ButFaXiaoXi.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.ButFaXiaoXi.IsDrawBorder = false;
@@ -136,20 +136,40 @@
             this.BeiZhu.WaterText = "";
             this.BeiZhu.WordWrap = true;
             // 
+            // Hyld
+            // 
+            this.Hyld.AutoSize = true;
+            this.Hyld.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
+            this.Hyld.Location = new System.Drawing.Point(93, 83);
+            this.Hyld.Name = "Hyld";
+            this.Hyld.Size = new System.Drawing.Size(105, 20);
+            this.Hyld.TabIndex = 12;
+            this.Hyld.Text = "DingDing0001";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
+            this.label1.Location = new System.Drawing.Point(23, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "个人信息";
+            // 
             // HyName2
             // 
             this.HyName2.AutoSize = true;
-            this.HyName2.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.HyName2.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.HyName2.Location = new System.Drawing.Point(93, 43);
             this.HyName2.Name = "HyName2";
-            this.HyName2.Size = new System.Drawing.Size(51, 20);
+            this.HyName2.Size = new System.Drawing.Size(52, 20);
             this.HyName2.TabIndex = 10;
             this.HyName2.Text = "yiyayo";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label12.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
             this.label12.Location = new System.Drawing.Point(23, 123);
             this.label12.Name = "label12";
@@ -157,10 +177,21 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "备注";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
+            this.label10.Location = new System.Drawing.Point(23, 83);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "钉钉号";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label11.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
             this.label11.Location = new System.Drawing.Point(23, 43);
             this.label11.Name = "label11";
@@ -189,18 +220,28 @@
             this.skinPanel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             this.skinPanel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
             // 
-            // HyName
+            // skinButton1
             // 
-            this.HyName.AutoSize = true;
-            this.HyName.Font = new System.Drawing.Font("微软雅黑", 18F);
-            this.HyName.Location = new System.Drawing.Point(21, 63);
-            this.HyName.Name = "HyName";
-            this.HyName.Size = new System.Drawing.Size(62, 31);
-            this.HyName.TabIndex = 0;
-            this.HyName.Text = "昵称";
-            this.HyName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
-            this.HyName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
-            this.HyName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
+            this.skinButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
+            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton1.FadeGlow = false;
+            this.skinButton1.ImageSize = new System.Drawing.Size(13, 13);
+            this.skinButton1.InheritColor = true;
+            this.skinButton1.IsDrawBorder = false;
+            this.skinButton1.Location = new System.Drawing.Point(307, 12);
+            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
+            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
+            this.skinButton1.Size = new System.Drawing.Size(13, 13);
+            this.skinButton1.TabIndex = 7;
+            this.skinButton1.Text = "//";
+            this.skinButton1.UseVisualStyleBackColor = false;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
             // 
             // skinButton9
             // 
@@ -236,59 +277,18 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
             // 
-            // label10
+            // HyName
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
-            this.label10.Location = new System.Drawing.Point(23, 83);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "钉钉号";
-            // 
-            // Hyld
-            // 
-            this.Hyld.AutoSize = true;
-            this.Hyld.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.Hyld.Location = new System.Drawing.Point(93, 83);
-            this.Hyld.Name = "Hyld";
-            this.Hyld.Size = new System.Drawing.Size(107, 20);
-            this.Hyld.TabIndex = 12;
-            this.Hyld.Text = "DingDing0001";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label1.Location = new System.Drawing.Point(23, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "个人信息";
-            // 
-            // skinButton1
-            // 
-            this.skinButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
-            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton1.FadeGlow = false;
-            this.skinButton1.ImageSize = new System.Drawing.Size(13, 13);
-            this.skinButton1.InheritColor = true;
-            this.skinButton1.IsDrawBorder = false;
-            this.skinButton1.Location = new System.Drawing.Point(307, 12);
-            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
-            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
-            this.skinButton1.Size = new System.Drawing.Size(13, 13);
-            this.skinButton1.TabIndex = 7;
-            this.skinButton1.Text = "//";
-            this.skinButton1.UseVisualStyleBackColor = false;
-            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
+            this.HyName.AutoSize = true;
+            this.HyName.Font = new System.Drawing.Font("阿里巴巴普惠体", 18F);
+            this.HyName.Location = new System.Drawing.Point(21, 63);
+            this.HyName.Name = "HyName";
+            this.HyName.Size = new System.Drawing.Size(63, 33);
+            this.HyName.TabIndex = 0;
+            this.HyName.Text = "昵称";
+            this.HyName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.HyName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            this.HyName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
             // 
             // FrmTianJiaXiangXiXingXi
             // 

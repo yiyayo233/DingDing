@@ -18,19 +18,11 @@ namespace WindowsFormsApp1
             paf = parent;
         }
 
+
         private XinDeHaoYou paf;
-        
-        /// <summary>
-        /// 用户id
-        /// </summary>
+
         public string Yh_ld = "";
-        /// <summary>
-        /// 好友名称
-        /// </summary>
         public string txt_HaoYouName = "";
-        /// <summary>
-        /// 好友id
-        /// </summary>
         public string chaZhaoYhld = "";
 
         private void TongXunHaoYou_Load(object sender, EventArgs e)
@@ -81,9 +73,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 初始化控件
-        /// <summary>
-        /// 初始化控件
-        /// </summary>
         public void UptedaTongXunHaoYou()
         {
             foreach (var lb in panel1.Controls)
@@ -102,9 +91,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 打开FrmTongXunXiangXiXingXi窗口
-        /// <summary>
-        /// 打开好友详细1窗口
-        /// </summary>
         private void ShowFrmTongXunXiangXiXingXi()
         {
             FrmTongXunXiangXiXingXi frmTongXunXiangXiXingXi = new FrmTongXunXiangXiXingXi(paf);

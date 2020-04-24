@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -44,7 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_haoma = new System.Windows.Forms.TextBox();
             this.txt_mima = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,11 +112,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label2.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(15, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 21);
+            this.label2.Size = new System.Drawing.Size(42, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "钉钉";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
@@ -148,6 +148,14 @@
             this.panel5.Size = new System.Drawing.Size(297, 383);
             this.panel5.TabIndex = 13;
             // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(30, 16);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 100);
+            this.panel6.TabIndex = 19;
+            this.panel6.Visible = false;
+            // 
             // skinButton1
             // 
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
@@ -158,7 +166,7 @@
             this.skinButton1.DownBack = null;
             this.skinButton1.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(249)))));
             this.skinButton1.FadeGlow = false;
-            this.skinButton1.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton1.Font = new System.Drawing.Font("阿里巴巴普惠体", 11.25F);
             this.skinButton1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.skinButton1.InnerBorderColor = System.Drawing.Color.Transparent;
             this.skinButton1.IsDrawGlass = false;
@@ -178,11 +186,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 8.25F);
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(199, 270);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "忘记密码";
             this.label1.Visible = false;
@@ -236,35 +244,28 @@
             // txt_haoma
             // 
             this.txt_haoma.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_haoma.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_haoma.Font = new System.Drawing.Font("阿里巴巴普惠体", 11.25F);
             this.txt_haoma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(166)))), ((int)(((byte)(170)))));
             this.txt_haoma.Location = new System.Drawing.Point(117, 180);
             this.txt_haoma.Name = "txt_haoma";
-            this.txt_haoma.Size = new System.Drawing.Size(137, 20);
+            this.txt_haoma.Size = new System.Drawing.Size(137, 21);
             this.txt_haoma.TabIndex = 12;
-            this.txt_haoma.MouseEnter += new System.EventHandler(this.txt_haoma_Enter);
+            this.txt_haoma.Text = "请输入手机号";
+            this.txt_haoma.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_haoma_Enter);
             this.txt_haoma.MouseLeave += new System.EventHandler(this.txt_haoma_Leave);
             // 
             // txt_mima
             // 
             this.txt_mima.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_mima.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_mima.Font = new System.Drawing.Font("阿里巴巴普惠体", 11.25F);
             this.txt_mima.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(166)))), ((int)(((byte)(170)))));
             this.txt_mima.Location = new System.Drawing.Point(35, 222);
             this.txt_mima.Name = "txt_mima";
             this.txt_mima.PasswordChar = '*';
-            this.txt_mima.Size = new System.Drawing.Size(230, 20);
+            this.txt_mima.Size = new System.Drawing.Size(230, 21);
             this.txt_mima.TabIndex = 11;
-            this.txt_mima.MouseEnter += new System.EventHandler(this.txt_mima_Enter);
+            this.txt_mima.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_mima_Enter);
             this.txt_mima.MouseLeave += new System.EventHandler(this.txt_mima_Leave);
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(30, 16);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 100);
-            this.panel6.TabIndex = 19;
-            this.panel6.Visible = false;
             // 
             // DingDing
             // 

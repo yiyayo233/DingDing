@@ -50,6 +50,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
@@ -83,7 +84,7 @@
             button1.Dock = System.Windows.Forms.DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("宋体", 9.5F);
+            button1.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
             button1.Image = global::WindowsFormsApp1.Properties.Resources.消息__1_1;
             button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -392,6 +393,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(button1);
@@ -404,6 +406,26 @@
             this.panel1.Size = new System.Drawing.Size(70, 679);
             this.panel1.TabIndex = 0;
             // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
+            this.button5.Image = global::WindowsFormsApp1.Properties.Resources.日程___1_;
+            this.button5.Location = new System.Drawing.Point(0, 332);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(70, 77);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "日程";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button3
             // 
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -411,7 +433,7 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("宋体", 9.5F);
+            this.button3.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
             this.button3.Image = global::WindowsFormsApp1.Properties.Resources.通讯录__1_1;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -432,7 +454,7 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("宋体", 9.5F);
+            this.button2.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -612,6 +634,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SysMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SysMain_Load);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -636,6 +659,7 @@
         private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinButton skinButton2;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel6;

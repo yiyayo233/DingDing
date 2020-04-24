@@ -21,10 +21,6 @@ namespace WindowsFormsApp1
         static string strcon = "Data Source=.;Initial Catalog=DingDing;Integrated Security=True";
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
-        
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
 
         private void FrmTongXunLu_Load(object sender, EventArgs e)
@@ -134,6 +130,74 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        /*#region 改变panel19背景颜色 特别关注
+        private void panel19_MouseDown(object sender, MouseEventArgs e)
+        {
+            Panel3Panel9Panel14Panel19Panel24();
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            CloseAllFrom();
+            this.teBieGuanZhu1.Yh_ld = Yh_ld;
+            this.teBieGuanZhu1.Visible = true;
+        }
+
+        private void panel19_MouseEnter(object sender, EventArgs e)
+        {
+            if (this.panel19.BackColor != System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+                this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+            }
+        }
+
+        private void panel19_MouseLeave(object sender, EventArgs e)
+        {
+            if (this.panel19.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+
+            }
+            else
+            {
+                if (this.panel19.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247))))))
+                {
+                    this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                }
+            }
+        }
+        #endregion*/
+
+        #region 全部给我变白
+        private void Panel3Panel9Panel14Panel19Panel24() {
+            if (this.panel3.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+                this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            }
+            /*if (this.panel9.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+                this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            }*/
+            if (this.panel14.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+                this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            }
+            /*if (this.panel19.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+                this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            }*/
+            if (this.panel24.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
+            {
+                this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            }
+        }
+        #endregion
+
+        #region 关闭全部分组窗口
+        private void CloseAllFrom() {
+            this.xinDeHaoYou1.Visible = false;
+            this.woDeQingZu1.Visible = false;
+            this.teBieGuanZhu1.Visible = false;
+            this.tongXunGongSi1.Visible = false;
+        }
+        #endregion
+
         #region 改变panel14背景颜色 创建团队
         private void panel24_MouseDown(object sender, MouseEventArgs e)
         {
@@ -172,84 +236,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        /*#region 改变panel19背景颜色 特别关注
-        private void panel19_MouseDown(object sender, MouseEventArgs e)
-        {
-            Panel3Panel9Panel14Panel19Panel24();
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            CloseAllFrom();
-            this.teBieGuanZhu1.Yh_ld = Yh_ld;
-            this.teBieGuanZhu1.Visible = true;
-        }
-
-        private void panel19_MouseEnter(object sender, EventArgs e)
-        {
-            if (this.panel19.BackColor != System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-                this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            }
-        }
-
-        private void panel19_MouseLeave(object sender, EventArgs e)
-        {
-            if (this.panel19.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-
-            }
-            else
-            {
-                if (this.panel19.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247))))))
-                {
-                    this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-                }
-            }
-        }
-        #endregion*/
-
-        #region 全部变白
-        /// <summary>
-        /// 全部变白
-        /// </summary>
-        private void Panel3Panel9Panel14Panel19Panel24() {
-            if (this.panel3.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-                this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            }
-            /*if (this.panel9.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-                this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            }*/
-            if (this.panel14.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-                this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            }
-            /*if (this.panel19.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-                this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            }*/
-            if (this.panel24.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
-            {
-                this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            }
-        }
-        #endregion
-
-        #region 关闭全部分组窗口
-        /// <summary>
-        /// 关闭全部分组窗口
-        /// </summary>
-        private void CloseAllFrom() {
-            this.xinDeHaoYou1.Visible = false;
-            this.woDeQingZu1.Visible = false;
-            this.teBieGuanZhu1.Visible = false;
-            this.tongXunGongSi1.Visible = false;
-        }
-        #endregion
-
         #region 查找公司
-        /// <summary>
-        /// 查找公司
-        /// </summary>
         public void SelectGongSi() {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try
@@ -308,8 +295,11 @@ namespace WindowsFormsApp1
             }
         }
 
+
+
         #endregion
 
+        //代码部分。。。
 
     }
 }

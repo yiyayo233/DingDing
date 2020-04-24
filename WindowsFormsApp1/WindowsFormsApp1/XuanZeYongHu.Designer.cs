@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XuanZeYongHu));
             this.panelDanGe = new System.Windows.Forms.Panel();
-            this.RadioButtonDanGe = new CCWin.SkinControl.SkinRadioButton();
             this.TxtYongHuName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RadioButtonDanGe = new CCWin.SkinControl.SkinRadioButton();
             this.panelDanGe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,30 @@
             this.panelDanGe.TabIndex = 2;
             this.panelDanGe.MouseEnter += new System.EventHandler(this.panelDanGe_MouseEnter);
             this.panelDanGe.MouseLeave += new System.EventHandler(this.panelDanGe_MouseLeave);
+            // 
+            // TxtYongHuName
+            // 
+            this.TxtYongHuName.AutoSize = true;
+            this.TxtYongHuName.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
+            this.TxtYongHuName.Location = new System.Drawing.Point(75, 13);
+            this.TxtYongHuName.Name = "TxtYongHuName";
+            this.TxtYongHuName.Size = new System.Drawing.Size(65, 20);
+            this.TxtYongHuName.TabIndex = 2;
+            this.TxtYongHuName.Text = "用户名称";
+            this.TxtYongHuName.MouseEnter += new System.EventHandler(this.panelDanGe_MouseEnter);
+            this.TxtYongHuName.MouseLeave += new System.EventHandler(this.panelDanGe_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(43, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.panelDanGe_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.panelDanGe_MouseLeave);
             // 
             // RadioButtonDanGe
             // 
@@ -73,30 +97,6 @@
             this.RadioButtonDanGe.UseVisualStyleBackColor = false;
             this.RadioButtonDanGe.MouseEnter += new System.EventHandler(this.panelDanGe_MouseEnter);
             this.RadioButtonDanGe.MouseLeave += new System.EventHandler(this.panelDanGe_MouseLeave);
-            // 
-            // TxtYongHuName
-            // 
-            this.TxtYongHuName.AutoSize = true;
-            this.TxtYongHuName.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.TxtYongHuName.Location = new System.Drawing.Point(75, 13);
-            this.TxtYongHuName.Name = "TxtYongHuName";
-            this.TxtYongHuName.Size = new System.Drawing.Size(65, 20);
-            this.TxtYongHuName.TabIndex = 2;
-            this.TxtYongHuName.Text = "用户名称";
-            this.TxtYongHuName.MouseEnter += new System.EventHandler(this.panelDanGe_MouseEnter);
-            this.TxtYongHuName.MouseLeave += new System.EventHandler(this.panelDanGe_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(43, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.panelDanGe_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.panelDanGe_MouseLeave);
             // 
             // XuanZeYongHu
             // 

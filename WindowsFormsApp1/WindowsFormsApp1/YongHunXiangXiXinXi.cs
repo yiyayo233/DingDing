@@ -11,9 +11,6 @@ using System.Runtime.InteropServices;
 
 namespace WindowsFormsApp1
 {
-    /// <summary>
-    /// 这个控件暂时没有
-    /// </summary>
     public partial class YongHunXiangXiXinXi : UserControl
     {
 

@@ -61,10 +61,10 @@
             // Txt_Name
             // 
             this.Txt_Name.AutoSize = true;
-            this.Txt_Name.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_Name.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_Name.Location = new System.Drawing.Point(74, 22);
             this.Txt_Name.Name = "Txt_Name";
-            this.Txt_Name.Size = new System.Drawing.Size(74, 21);
+            this.Txt_Name.Size = new System.Drawing.Size(74, 22);
             this.Txt_Name.TabIndex = 5;
             this.Txt_Name.Text = "列表名称";
             this.Txt_Name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Txt_ShiJian_MouseDown);

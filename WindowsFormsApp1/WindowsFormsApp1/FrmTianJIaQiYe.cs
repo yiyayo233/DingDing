@@ -38,9 +38,6 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户ld
-        /// </summary>
         public string Yh_ld = "";
 
         #region  窗体无边框样式时移动
@@ -107,9 +104,6 @@ namespace WindowsFormsApp1
         }
 
         #region 提交
-        /// <summary>
-        /// 提交
-        /// </summary>
         public void InsertGongSi() {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try
@@ -162,10 +156,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 排空
-        /// <summary>
-        /// 排空
-        /// </summary>
-        /// <returns></returns>
         public bool PaiKong() {
             if (this.Txt_GongSiName.Text.Trim().Equals(string.Empty))
             {
@@ -185,10 +175,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 截取日期
-        /// <summary>
-        /// 截取日期
-        /// </summary>
-        /// <returns></returns>
         public string JieQvRiQi()
         {
             string dAteTime = "";
@@ -201,6 +187,8 @@ namespace WindowsFormsApp1
             {
                 dAteTime = dAteTime + DateTime.Now.Month.ToString();
             }
+            
+
             /*string dateTime = DateTime.Now.ToString();
             string time = dateTime.Substring(0, dateTime. "/");*/
             return dAteTime;
@@ -213,9 +201,6 @@ namespace WindowsFormsApp1
         }
 
         #region 初始化页面
-        /// <summary>
-        /// 初始化页面 添加企业类型
-        /// </summary>
         public void ChuShiHua() {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try

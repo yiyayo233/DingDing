@@ -32,10 +32,10 @@
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Text_ShuRuYHld = new CCWin.SkinControl.SkinTextBox();
-            this.ButFaXiaoXi = new CCWin.SkinControl.SkinButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.ButFaXiaoXi = new CCWin.SkinControl.SkinButton();
+            this.Text_ShuRuYHld = new CCWin.SkinControl.SkinTextBox();
             this.skinPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,10 +61,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label1.Location = new System.Drawing.Point(24, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.Size = new System.Drawing.Size(74, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "添加好友";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
@@ -84,6 +84,65 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 138);
             this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.panel2.Location = new System.Drawing.Point(28, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(355, 1);
+            this.panel2.TabIndex = 17;
+            // 
+            // skinButton1
+            // 
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton1.DownBack = null;
+            this.skinButton1.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.skinButton1.FadeGlow = false;
+            this.skinButton1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
+            this.skinButton1.ForeColor = System.Drawing.Color.White;
+            this.skinButton1.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.skinButton1.IsDrawBorder = false;
+            this.skinButton1.IsDrawGlass = false;
+            this.skinButton1.Location = new System.Drawing.Point(213, 80);
+            this.skinButton1.MouseBack = null;
+            this.skinButton1.MouseBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = null;
+            this.skinButton1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton1.Size = new System.Drawing.Size(82, 39);
+            this.skinButton1.TabIndex = 16;
+            this.skinButton1.Text = "确定";
+            this.skinButton1.UseVisualStyleBackColor = false;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
+            // 
+            // ButFaXiaoXi
+            // 
+            this.ButFaXiaoXi.BackColor = System.Drawing.Color.Transparent;
+            this.ButFaXiaoXi.BaseColor = System.Drawing.Color.White;
+            this.ButFaXiaoXi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(213)))), ((int)(((byte)(214)))));
+            this.ButFaXiaoXi.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.ButFaXiaoXi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButFaXiaoXi.DownBack = null;
+            this.ButFaXiaoXi.DownBaseColor = System.Drawing.Color.White;
+            this.ButFaXiaoXi.FadeGlow = false;
+            this.ButFaXiaoXi.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
+            this.ButFaXiaoXi.ForeColor = System.Drawing.Color.Black;
+            this.ButFaXiaoXi.IsDrawGlass = false;
+            this.ButFaXiaoXi.Location = new System.Drawing.Point(301, 80);
+            this.ButFaXiaoXi.MouseBack = null;
+            this.ButFaXiaoXi.MouseBaseColor = System.Drawing.Color.White;
+            this.ButFaXiaoXi.Name = "ButFaXiaoXi";
+            this.ButFaXiaoXi.NormlBack = null;
+            this.ButFaXiaoXi.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.ButFaXiaoXi.Size = new System.Drawing.Size(82, 39);
+            this.ButFaXiaoXi.TabIndex = 16;
+            this.ButFaXiaoXi.Text = "取消";
+            this.ButFaXiaoXi.UseVisualStyleBackColor = false;
+            this.ButFaXiaoXi.Click += new System.EventHandler(this.ButFaXiaoXi_Click);
             // 
             // Text_ShuRuYHld
             // 
@@ -125,65 +184,6 @@
             this.Text_ShuRuYHld.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.Text_ShuRuYHld.WaterText = "请输入手机号/钉钉号";
             this.Text_ShuRuYHld.WordWrap = true;
-            // 
-            // ButFaXiaoXi
-            // 
-            this.ButFaXiaoXi.BackColor = System.Drawing.Color.Transparent;
-            this.ButFaXiaoXi.BaseColor = System.Drawing.Color.White;
-            this.ButFaXiaoXi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(213)))), ((int)(((byte)(214)))));
-            this.ButFaXiaoXi.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.ButFaXiaoXi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButFaXiaoXi.DownBack = null;
-            this.ButFaXiaoXi.DownBaseColor = System.Drawing.Color.White;
-            this.ButFaXiaoXi.FadeGlow = false;
-            this.ButFaXiaoXi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButFaXiaoXi.ForeColor = System.Drawing.Color.Black;
-            this.ButFaXiaoXi.IsDrawGlass = false;
-            this.ButFaXiaoXi.Location = new System.Drawing.Point(301, 80);
-            this.ButFaXiaoXi.MouseBack = null;
-            this.ButFaXiaoXi.MouseBaseColor = System.Drawing.Color.White;
-            this.ButFaXiaoXi.Name = "ButFaXiaoXi";
-            this.ButFaXiaoXi.NormlBack = null;
-            this.ButFaXiaoXi.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.ButFaXiaoXi.Size = new System.Drawing.Size(82, 39);
-            this.ButFaXiaoXi.TabIndex = 16;
-            this.ButFaXiaoXi.Text = "取消";
-            this.ButFaXiaoXi.UseVisualStyleBackColor = false;
-            this.ButFaXiaoXi.Click += new System.EventHandler(this.ButFaXiaoXi_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.panel2.Location = new System.Drawing.Point(28, 63);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(355, 1);
-            this.panel2.TabIndex = 17;
-            // 
-            // skinButton1
-            // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.skinButton1.FadeGlow = false;
-            this.skinButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton1.ForeColor = System.Drawing.Color.White;
-            this.skinButton1.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.skinButton1.IsDrawBorder = false;
-            this.skinButton1.IsDrawGlass = false;
-            this.skinButton1.Location = new System.Drawing.Point(213, 80);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.MouseBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton1.Size = new System.Drawing.Size(82, 39);
-            this.skinButton1.TabIndex = 16;
-            this.skinButton1.Text = "确定";
-            this.skinButton1.UseVisualStyleBackColor = false;
-            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
             // 
             // FrmTianJIaHaoYou
             // 

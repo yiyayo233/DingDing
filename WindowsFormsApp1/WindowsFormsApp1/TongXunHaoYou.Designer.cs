@@ -69,10 +69,10 @@
             // Txt_HaoYouName
             // 
             this.Txt_HaoYouName.AutoSize = true;
-            this.Txt_HaoYouName.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_HaoYouName.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_HaoYouName.Location = new System.Drawing.Point(74, 19);
             this.Txt_HaoYouName.Name = "Txt_HaoYouName";
-            this.Txt_HaoYouName.Size = new System.Drawing.Size(74, 21);
+            this.Txt_HaoYouName.Size = new System.Drawing.Size(74, 22);
             this.Txt_HaoYouName.TabIndex = 6;
             this.Txt_HaoYouName.Text = "好友名称";
             this.Txt_HaoYouName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);

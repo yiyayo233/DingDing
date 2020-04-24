@@ -10,9 +10,6 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    /// <summary>
-    /// 这个控件暂时没用
-    /// </summary>
     public partial class TongXunLieBiao : UserControl
     {
         public TongXunLieBiao()

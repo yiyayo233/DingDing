@@ -250,16 +250,15 @@
             // 
             this.tetSouSuo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(238)))));
             this.tetSouSuo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tetSouSuo.Font = new System.Drawing.Font("宋体", 14F);
+            this.tetSouSuo.Font = new System.Drawing.Font("阿里巴巴普惠体", 14F);
             this.tetSouSuo.Location = new System.Drawing.Point(44, 7);
             this.tetSouSuo.Name = "tetSouSuo";
-            this.tetSouSuo.Size = new System.Drawing.Size(158, 22);
+            this.tetSouSuo.Size = new System.Drawing.Size(158, 26);
             this.tetSouSuo.TabIndex = 0;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmXinXi
             // 

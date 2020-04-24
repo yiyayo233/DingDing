@@ -46,8 +46,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.YhName = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.YhName = new System.Windows.Forms.Label();
             this.skinPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -116,10 +116,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("阿里巴巴普惠体", 9.75F);
             this.label3.Location = new System.Drawing.Point(20, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 19);
+            this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "退出钉钉";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel13_MouseDown);
@@ -141,10 +141,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("阿里巴巴普惠体", 9.75F);
             this.label2.Location = new System.Drawing.Point(20, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 19);
+            this.label2.Size = new System.Drawing.Size(60, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "切换账号";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseDown);
@@ -202,10 +202,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 9.75F);
             this.label1.Location = new System.Drawing.Point(20, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "修改密码";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
@@ -247,20 +247,6 @@
             this.panel1.Size = new System.Drawing.Size(271, 79);
             this.panel1.TabIndex = 4;
             // 
-            // YhName
-            // 
-            this.YhName.AutoSize = true;
-            this.YhName.Font = new System.Drawing.Font("微软雅黑", 13F);
-            this.YhName.ForeColor = System.Drawing.Color.Black;
-            this.YhName.Location = new System.Drawing.Point(20, 29);
-            this.YhName.Name = "YhName";
-            this.YhName.Size = new System.Drawing.Size(64, 24);
-            this.YhName.TabIndex = 0;
-            this.YhName.Text = "用户名";
-            this.YhName.Click += new System.EventHandler(this.label1_Click);
-            this.YhName.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.YhName.MouseLeave += new System.EventHandler(this.YhName_MouseLeave);
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -270,6 +256,20 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            // 
+            // YhName
+            // 
+            this.YhName.AutoSize = true;
+            this.YhName.Font = new System.Drawing.Font("阿里巴巴普惠体", 13F);
+            this.YhName.ForeColor = System.Drawing.Color.Black;
+            this.YhName.Location = new System.Drawing.Point(20, 29);
+            this.YhName.Name = "YhName";
+            this.YhName.Size = new System.Drawing.Size(66, 25);
+            this.YhName.TabIndex = 0;
+            this.YhName.Text = "用户名";
+            this.YhName.Click += new System.EventHandler(this.label1_Click);
+            this.YhName.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.YhName.MouseLeave += new System.EventHandler(this.YhName_MouseLeave);
             // 
             // FrmXiaoTouXiang
             // 

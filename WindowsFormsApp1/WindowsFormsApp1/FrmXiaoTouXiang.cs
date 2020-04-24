@@ -24,15 +24,9 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
 
         #region 初始化
-        /// <summary>
-        /// 初始化
-        /// </summary>
         public void ChuShiHua() {
             SqlConnection sqlConnection = new SqlConnection(strconn);
             try
@@ -58,7 +52,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 改变用户名颜色
+        #region 用户名
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -81,9 +75,6 @@ namespace WindowsFormsApp1
         }
 
         #region 修改密码
-        /// <summary>
-        /// 修改密码
-        /// </summary>
         public void UpdateMiMa() {
             XuiGaiYhMiMa xuiGaiYhMiMa = new XuiGaiYhMiMa();
             xuiGaiYhMiMa.Yh_ld = Yh_ld;
@@ -123,9 +114,6 @@ namespace WindowsFormsApp1
         }
 
         #region 切换账号
-        /// <summary>
-        /// 切换账号
-        /// </summary>
         public void QeiHuanZhangHao() {
             this.Hide();
             this.FindForm().Close();
@@ -166,9 +154,6 @@ namespace WindowsFormsApp1
         }
 
         #region 退出钉钉
-        /// <summary>
-        /// 退出钉钉
-        /// </summary>
         public void TuiChuDingDing()
         {
             Application.Exit();

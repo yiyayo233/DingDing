@@ -24,17 +24,8 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
-        /// <summary>
-        /// 好友名称
-        /// </summary>
         public string txt_HaoYouName = "";
-        /// <summary>
-        /// 好友id
-        /// </summary>
         public string chaZhaoYhld = "";
 
         private void TongXunHaoYou_Load(object sender, EventArgs e)
@@ -85,17 +76,14 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 初始化控件
-        /// <summary>
-        /// 初始化控件
-        /// </summary>
         public void UptedaTongXunHaoYou()
         {
             foreach (var lb in panel1.Controls)
             {
                 if (lb is Label)
                 {
-                    Label obj = lb as Label;   
-
+                    Label obj = lb as Label;   //如果把循环改成这样就可以省略这一步foreach(Label lb in mi_image1.Controls)
+                                               //MessageBox.Show("哈哈哈，我找到用户控件里的控件对象啦"+obj.Name);
                     if (obj.Name == "Txt_HaoYouName")
                     {
                         obj.Text = txt_HaoYouName;
@@ -106,9 +94,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 打开FrmTongXunXiangXiXingXi窗口
-        /// <summary>
-        /// 打开好友信息1窗口
-        /// </summary>
         private void ShowFrmTongXunXiangXiXingXi()
         {
             FrmTongXunXiangXiXingXi1 frmTongXunXiangXiXingXi1 = new FrmTongXunXiangXiXingXi1(paf);
@@ -118,11 +103,8 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 打开FrmTianJiaXiangXiXingXi1窗口
-        /// <summary>
-        /// 打开添加好友1窗口
-        /// </summary>
-        private void ShowFrmTianJiaXiangXiXingXi1()
+        #region 打开FrmTongXunXiangXiXingXi窗口
+        private void ShowFrmTianJiaXiangXiXingXi()
         {
             FrmTianJiaXiangXiXingXi1 frmTianJiaXiangXiXingXi1 = new FrmTianJiaXiangXiXingXi1(paf);
             frmTianJiaXiangXiXingXi1.Yh_ld = Yh_ld;
@@ -131,11 +113,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-
         #region 判断是否是好友
-        /// <summary>
-        /// 判断是否是好友
-        /// </summary>
         public void IfHongYou()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -154,7 +132,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    ShowFrmTianJiaXiangXiXingXi1();
+                    ShowFrmTianJiaXiangXiXingXi();
                 }
             }
             catch (Exception)

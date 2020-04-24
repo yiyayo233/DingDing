@@ -10,9 +10,6 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    /// <summary>
-    /// 这个控件暂时没有
-    /// </summary>
     public partial class XuanZeChengYuan : UserControl
     {
         public XuanZeChengYuan()

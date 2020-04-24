@@ -74,11 +74,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.label1.Location = new System.Drawing.Point(582, 392);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 21);
+            this.label1.Size = new System.Drawing.Size(146, 22);
             this.label1.TabIndex = 8;
             this.label1.Text = "钉 钉 你 值 得 拥 有";
             // 
@@ -229,10 +229,10 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(238)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("宋体", 13F);
+            this.textBox2.Font = new System.Drawing.Font("阿里巴巴普惠体", 13F);
             this.textBox2.Location = new System.Drawing.Point(44, 10);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
+            this.textBox2.Size = new System.Drawing.Size(158, 24);
             this.textBox2.TabIndex = 1;
             // 
             // textBox1

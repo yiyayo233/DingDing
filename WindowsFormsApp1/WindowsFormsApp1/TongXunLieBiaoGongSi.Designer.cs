@@ -68,10 +68,10 @@
             // Txt_GongSiName
             // 
             this.Txt_GongSiName.AutoSize = true;
-            this.Txt_GongSiName.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_GongSiName.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_GongSiName.Location = new System.Drawing.Point(74, 22);
             this.Txt_GongSiName.Name = "Txt_GongSiName";
-            this.Txt_GongSiName.Size = new System.Drawing.Size(74, 21);
+            this.Txt_GongSiName.Size = new System.Drawing.Size(74, 22);
             this.Txt_GongSiName.TabIndex = 5;
             this.Txt_GongSiName.Text = "公司名称";
             this.Txt_GongSiName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);

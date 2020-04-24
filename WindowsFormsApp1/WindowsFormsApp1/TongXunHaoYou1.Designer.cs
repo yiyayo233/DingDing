@@ -33,8 +33,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.Txt_HaoYouName = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox_Top = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Top)).BeginInit();
             this.SuspendLayout();
@@ -69,10 +69,10 @@
             // Txt_HaoYouName
             // 
             this.Txt_HaoYouName.AutoSize = true;
-            this.Txt_HaoYouName.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_HaoYouName.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_HaoYouName.Location = new System.Drawing.Point(74, 19);
             this.Txt_HaoYouName.Name = "Txt_HaoYouName";
-            this.Txt_HaoYouName.Size = new System.Drawing.Size(74, 21);
+            this.Txt_HaoYouName.Size = new System.Drawing.Size(74, 22);
             this.Txt_HaoYouName.TabIndex = 6;
             this.Txt_HaoYouName.Text = "好友名称";
             this.Txt_HaoYouName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
@@ -90,17 +90,6 @@
             this.panel4.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.panel4.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(25, 60);
-            this.panel3.TabIndex = 0;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
-            this.panel3.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
-            this.panel3.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
-            // 
             // pictureBox_Top
             // 
             this.pictureBox_Top.Dock = System.Windows.Forms.DockStyle.Left;
@@ -114,6 +103,17 @@
             this.pictureBox_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             this.pictureBox_Top.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.pictureBox_Top.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(25, 60);
+            this.panel3.TabIndex = 0;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.panel3.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel3.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             // 
             // TongXunHaoYou1
             // 

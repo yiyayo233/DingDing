@@ -11,9 +11,6 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    /// <summary>
-    /// 这个控件暂时爆发
-    /// </summary>
     public partial class WoDeHaoYou : UserControl
     {
         public WoDeHaoYou()/*FrmTongXunLu parent*/

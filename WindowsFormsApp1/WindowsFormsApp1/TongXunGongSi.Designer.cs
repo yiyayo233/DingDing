@@ -68,10 +68,10 @@
             // Txt_GongSiName
             // 
             this.Txt_GongSiName.AutoSize = true;
-            this.Txt_GongSiName.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_GongSiName.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_GongSiName.Location = new System.Drawing.Point(78, 19);
             this.Txt_GongSiName.Name = "Txt_GongSiName";
-            this.Txt_GongSiName.Size = new System.Drawing.Size(74, 21);
+            this.Txt_GongSiName.Size = new System.Drawing.Size(74, 22);
             this.Txt_GongSiName.TabIndex = 6;
             this.Txt_GongSiName.Text = "公司名称";
             // 
@@ -123,7 +123,7 @@
             // Txt_GongSiName2
             // 
             this.Txt_GongSiName2.AutoSize = true;
-            this.Txt_GongSiName2.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.Txt_GongSiName2.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.Txt_GongSiName2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(207)))), ((int)(((byte)(209)))));
             this.Txt_GongSiName2.Location = new System.Drawing.Point(21, 14);
             this.Txt_GongSiName2.Name = "Txt_GongSiName2";

@@ -137,7 +137,7 @@
             // DuiHuaRenName
             // 
             this.DuiHuaRenName.AutoSize = true;
-            this.DuiHuaRenName.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.DuiHuaRenName.Font = new System.Drawing.Font("阿里巴巴普惠体", 9F);
             this.DuiHuaRenName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(122)))), ((int)(((byte)(131)))));
             this.DuiHuaRenName.Location = new System.Drawing.Point(61, 4);
             this.DuiHuaRenName.Name = "DuiHuaRenName";

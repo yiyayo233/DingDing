@@ -89,11 +89,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label8.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label8.Location = new System.Drawing.Point(24, 15);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 21);
+            this.label8.Size = new System.Drawing.Size(42, 22);
             this.label8.TabIndex = 10;
             this.label8.Text = "更多";
             // 
@@ -541,7 +541,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label15.Font = new System.Drawing.Font("阿里巴巴普惠体", 15F);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.label15.Location = new System.Drawing.Point(454, 377);
             this.label15.Name = "label15";

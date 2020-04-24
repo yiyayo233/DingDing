@@ -22,24 +22,9 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
-
-        /// <summary>
-        /// 公司id
-        /// </summary>
         public string txt_GongSild = "";
-
-        /// <summary>
-        /// 公司名称
-        /// </summary>
         public string txt_GongSiName = "";
-
-        /// <summary>
-        /// 公司头像    暂时没有
-        /// </summary>
         public string txt_GongSiTx = "";
 
         private void TongXunGongSi_Load(object sender, EventArgs e)
@@ -48,9 +33,6 @@ namespace WindowsFormsApp1
         }
 
         #region 查询公司 初始化
-        /// <summary>
-        /// 查询公司 初始化
-        /// </summary>
         public void UpdateTongXunGongSi() {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try

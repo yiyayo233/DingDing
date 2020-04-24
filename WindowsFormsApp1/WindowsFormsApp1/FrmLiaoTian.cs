@@ -23,28 +23,12 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 收信人ld
-        /// </summary>
         public string sxld = "";
-
-        /// <summary>
-        /// 发送人ld
-        /// </summary>
         public string fsld = "";
-
-        /// <summary>
-        /// 发送内容
-        /// </summary>
         string nr = "";
 
-        /// <summary>
-        /// 判断是否是点击发送
-        /// </summary>
         public int pd = 0;
-        /// <summary>
-        /// 判断是否是群消息
-        /// </summary>
+
         public int i = 1;
 
         /// <summary>
@@ -60,11 +44,6 @@ namespace WindowsFormsApp1
         
 
         #region 加载页面事件
-        /// <summary>
-        /// 加载页面时 刷新会话列表和显示消息
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void FrmLiaoTian_Load(object sender, EventArgs e)
         {
             ShuaXin();
@@ -74,17 +53,13 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 发送
-        /// <summary>
-        /// 发送消息
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void butFaSong_Click(object sender, EventArgs e)
         {
             nr = textBox1.Text;
             if (CheckKong())
             {
-                AddSendMessage(nr,1);
+                AddSendMessage(nr,1);  //自己的
+                //AddReceiveMessage(nr,1);   //收消息的
                 TextBox1TextDelete();
          
             }
@@ -96,9 +71,8 @@ namespace WindowsFormsApp1
         /// <summary>
         /// 显示接收消息、收消息的
         /// </summary>
-        /// <param name="content">消息内容</param>
-        /// <param name="duiHuaRenName">对话人名称</param>
-        private void AddReceiveMessage(string content ,string duiHuaRenName)
+        /// <param name="model"></param>
+        private void AddReceiveMessage(string content, int pd,string duiHuaRenName)
         {
             Item item = new Item();
             item.messageType = WinformBubble.Item.MessageType.receive;
@@ -122,12 +96,10 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 更新界面，显示发送消息、自己的、发送消息
+        #region 更新界面，显示发送消息、自己的、添加
         /// <summary>
-        /// 更新界面，显示发送消息、自己的、发送消息
+        /// 更新界面，显示发送消息、自己的、添加
         /// </summary>
-        /// <param name="content">消息内容</param>
-        /// <param name="pd">判断是否是点击发送</param>
         private void AddSendMessage(string content,int pd)
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -194,9 +166,9 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 清空输入框
+        #region 清空
         /// <summary>
-        /// 清空输入框
+        /// 清空
         /// </summary>
         private void TextBox1TextDelete()
         {
@@ -204,11 +176,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 非空验证  查看输入框是否为空
-        /// <summary>
-        /// 非空验证  查看输入框是否为空
-        /// </summary>
-        /// <returns></returns>
+        #region 非空验证
         public bool CheckKong() {
             if (this.textBox1.Text.Equals(string.Empty))
             {
@@ -222,10 +190,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 截取日期&时间
-        /// <summary>
-        /// 截取日期&时间
-        /// </summary>
-        /// <returns></returns>
         public string JieQvRiQi()
         {
             string dateTime = DateTime.Now.ToString();
@@ -235,10 +199,7 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region 查找消息
-        /// <summary>
-        /// 查找消息
-        /// </summary>
+        #region 查找数据
         public void CheckXinXi()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -246,7 +207,6 @@ namespace WindowsFormsApp1
             {
 
                 StringBuilder selectXinXi = new StringBuilder();
-                //判断是否是群消息
                 if (i == 1)
                 {
                     selectXinXi.AppendFormat("select *");
@@ -268,14 +228,13 @@ namespace WindowsFormsApp1
 
                     for (int i = 0; i < dataSet.Tables["XxY"].Rows.Count; i++)
                     {
-                        //判断发消息的人是否是自己
                         if (dataSet.Tables["XxY"].Rows[i][4].ToString().Equals(fsld))
                         {
                             AddSendMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(), 2);
                         }
                         if (dataSet.Tables["XxY"].Rows[i][4].ToString() != fsld)
                         {
-                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(),"TFDNDSFJIF");
+                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(), 2,"TFDNDSFJIF");
                         }
                     }
 
@@ -302,12 +261,12 @@ namespace WindowsFormsApp1
                         {
                             AddSendMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), 2);
                         }
-                        else
+                        if (dataSet.Tables["XxQ"].Rows[i][4].ToString() != fsld)
                         {
                             StringBuilder selectYh = new StringBuilder();
                             selectYh.AppendFormat("select * ");
                             selectYh.AppendFormat("from Yh ");
-                            selectYh.AppendFormat("where Yh_Id = '{0}'", dataSet.Tables["XxQ"].Rows[i][4].ToString());
+                            selectYh.AppendFormat("where Yh_Id = '{0}'",dataSet.Tables["XxQ"].Rows[i][4].ToString());
                             adapter = new SqlDataAdapter(selectYh.ToString(), sqlConnection);
                             if (dataSet.Tables["FxYh"] != null)
                             {
@@ -316,7 +275,7 @@ namespace WindowsFormsApp1
 
                             adapter.Fill(dataSet, "FxYh");
 
-                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), dataSet.Tables["FxYh"].Rows[0][1].ToString());
+                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), 2, dataSet.Tables["FxYh"].Rows[0][1].ToString());
                         }
                     }
                 }
@@ -335,9 +294,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 查找发送人详细
-        /// <summary>
-        /// 查找发送人详细
-        /// </summary>
         public void CheckFSXiangXi()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -369,10 +325,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 查找收信人详细
-        /// <summary>
-        /// 查找收信人详细
-        /// </summary>
-        /// <param name="i">区分好友还是群</param>
         public void CheckSXXiangXi(int i)
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -427,9 +379,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 清空panel1&初始化数据
-        /// <summary>
-        /// 清空panel1&初始化数据
-        /// </summary>
         public void Emptypanel1()
         {
             this.panel1.Controls.Clear();
@@ -470,9 +419,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 初始化
-        /// <summary>
-        /// 初始化
-        /// </summary>
         public void ChuShiHua()
         {
             //IfSuoXinQun();
@@ -485,9 +431,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 刷新会话列表
-        /// <summary>
-        /// 刷新会话列表
-        /// </summary>
         public void ShuaXin() {
             Control control = this.Parent.Parent.Parent;
             string s = control.Name;
@@ -500,11 +443,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 刷新聊天消息
-        /// <summary>
-        /// 刷新聊天学习
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             Emptypanel1();

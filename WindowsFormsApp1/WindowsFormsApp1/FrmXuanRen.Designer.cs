@@ -32,15 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmXuanRen));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.xuanZeChengYuan1 = new WindowsFormsApp1.XuanZeChengYuan();
             this.panelGongSiXuanZe = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Txt_Name = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -51,23 +55,19 @@
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.skinButton9 = new CCWin.SkinControl.SkinButton();
-            this.xuanZeChengYuan1 = new WindowsFormsApp1.XuanZeChengYuan();
             this.skinPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelGongSiXuanZe.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // skinPanel1
@@ -97,6 +97,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(342, 491);
             this.panel3.TabIndex = 11;
+            // 
+            // xuanZeChengYuan1
+            // 
+            this.xuanZeChengYuan1.BackColor = System.Drawing.Color.White;
+            this.xuanZeChengYuan1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xuanZeChengYuan1.Location = new System.Drawing.Point(0, 162);
+            this.xuanZeChengYuan1.Name = "xuanZeChengYuan1";
+            this.xuanZeChengYuan1.Size = new System.Drawing.Size(342, 329);
+            this.xuanZeChengYuan1.TabIndex = 7;
+            this.xuanZeChengYuan1.Visible = false;
             // 
             // panelGongSiXuanZe
             // 
@@ -132,10 +142,22 @@
             this.panel11.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
             this.panel11.MouseLeave += new System.EventHandler(this.panel11_MouseLeave);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(34, 15);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.panel11_MouseLeave);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.label2.Font = new System.Drawing.Font("阿里巴巴普惠体", 10.5F);
             this.label2.Location = new System.Drawing.Point(61, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
@@ -157,10 +179,23 @@
             this.panel12.MouseEnter += new System.EventHandler(this.panel12_MouseEnter);
             this.panel12.MouseLeave += new System.EventHandler(this.panel12_MouseLeave);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(34, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseClick);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.panel12_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.panel12_MouseLeave);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.label3.Font = new System.Drawing.Font("阿里巴巴普惠体", 10.5F);
             this.label3.Location = new System.Drawing.Point(61, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
@@ -189,10 +224,10 @@
             // Txt_Name
             // 
             this.Txt_Name.AutoSize = true;
-            this.Txt_Name.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_Name.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_Name.Location = new System.Drawing.Point(74, 22);
             this.Txt_Name.Name = "Txt_Name";
-            this.Txt_Name.Size = new System.Drawing.Size(74, 21);
+            this.Txt_Name.Size = new System.Drawing.Size(74, 22);
             this.Txt_Name.TabIndex = 5;
             this.Txt_Name.Text = "公司名称";
             this.Txt_Name.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
@@ -205,6 +240,18 @@
             this.panel5.Size = new System.Drawing.Size(10, 50);
             this.panel5.TabIndex = 4;
             this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
             // 
             // panel6
             // 
@@ -305,7 +352,7 @@
             this.skinButton1.DownBack = null;
             this.skinButton1.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
             this.skinButton1.FadeGlow = false;
-            this.skinButton1.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.skinButton1.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F);
             this.skinButton1.ForeColor = System.Drawing.Color.Black;
             this.skinButton1.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
             this.skinButton1.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
@@ -331,7 +378,7 @@
             this.skinButton3.DownBack = null;
             this.skinButton3.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.skinButton3.FadeGlow = false;
-            this.skinButton3.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.skinButton3.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F);
             this.skinButton3.ForeColor = System.Drawing.Color.White;
             this.skinButton3.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.skinButton3.IsDrawBorder = false;
@@ -365,49 +412,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label1.Location = new System.Drawing.Point(28, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 21);
+            this.label1.Size = new System.Drawing.Size(42, 22);
             this.label1.TabIndex = 4;
             this.label1.Text = "选人";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(34, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.panel11_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseClick);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.panel12_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.panel12_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Txt_Name_MouseClick);
             // 
             // skinButton9
             // 
@@ -431,16 +441,6 @@
             this.skinButton9.UseVisualStyleBackColor = false;
             this.skinButton9.Click += new System.EventHandler(this.skinButton9_Click);
             // 
-            // xuanZeChengYuan1
-            // 
-            this.xuanZeChengYuan1.BackColor = System.Drawing.Color.White;
-            this.xuanZeChengYuan1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xuanZeChengYuan1.Location = new System.Drawing.Point(0, 162);
-            this.xuanZeChengYuan1.Name = "xuanZeChengYuan1";
-            this.xuanZeChengYuan1.Size = new System.Drawing.Size(342, 329);
-            this.xuanZeChengYuan1.TabIndex = 7;
-            this.xuanZeChengYuan1.Visible = false;
-            // 
             // FrmXuanRen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -456,16 +456,16 @@
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

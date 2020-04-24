@@ -22,9 +22,6 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户id
-        /// </summary>
         public string Yh_ld = "";
 
         private void WoDeQingZu_Load(object sender, EventArgs e)
@@ -32,9 +29,9 @@ namespace WindowsFormsApp1
             CheckQingZu();
         }
 
-        #region 查询好友、初始化、添加tongXunHaoYou控件
+        #region 查询好友、初始化&添加tongXunHaoYou控件
         /// <summary>
-        /// 查询好友、初始化、添加tongXunHaoYou控件
+        /// 查询好友、初始化&添加tongXunHaoYou控件
         /// </summary>
         public void CheckQingZu()
         {

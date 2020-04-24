@@ -60,7 +60,7 @@
             // Txt_RenShu
             // 
             this.Txt_RenShu.AutoSize = true;
-            this.Txt_RenShu.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Txt_RenShu.Font = new System.Drawing.Font("阿里巴巴普惠体", 9F);
             this.Txt_RenShu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(188)))), ((int)(((byte)(198)))));
             this.Txt_RenShu.Location = new System.Drawing.Point(74, 35);
             this.Txt_RenShu.Name = "Txt_RenShu";
@@ -85,10 +85,10 @@
             // Txt_QunZuName
             // 
             this.Txt_QunZuName.AutoSize = true;
-            this.Txt_QunZuName.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.Txt_QunZuName.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.Txt_QunZuName.Location = new System.Drawing.Point(74, 12);
             this.Txt_QunZuName.Name = "Txt_QunZuName";
-            this.Txt_QunZuName.Size = new System.Drawing.Size(74, 21);
+            this.Txt_QunZuName.Size = new System.Drawing.Size(74, 22);
             this.Txt_QunZuName.TabIndex = 6;
             this.Txt_QunZuName.Text = "群组名称";
             this.Txt_QunZuName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);

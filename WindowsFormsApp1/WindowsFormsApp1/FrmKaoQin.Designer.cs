@@ -113,11 +113,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label8.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label8.Location = new System.Drawing.Point(55, 15);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 21);
+            this.label8.Size = new System.Drawing.Size(42, 22);
             this.label8.TabIndex = 10;
             this.label8.Text = "考勤";
             // 
@@ -169,12 +169,12 @@
             // 
             this.ShangBanShiJIan.AutoSize = true;
             this.ShangBanShiJIan.BackColor = System.Drawing.Color.Transparent;
-            this.ShangBanShiJIan.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.ShangBanShiJIan.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F);
             this.ShangBanShiJIan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
             this.ShangBanShiJIan.Location = new System.Drawing.Point(82, 76);
             this.ShangBanShiJIan.Margin = new System.Windows.Forms.Padding(0);
             this.ShangBanShiJIan.Name = "ShangBanShiJIan";
-            this.ShangBanShiJIan.Size = new System.Drawing.Size(69, 20);
+            this.ShangBanShiJIan.Size = new System.Drawing.Size(70, 21);
             this.ShangBanShiJIan.TabIndex = 13;
             this.ShangBanShiJIan.Text = "上班时间";
             // 
@@ -210,11 +210,11 @@
             this.XiaBangDaKaShiajin.AutoSize = true;
             this.XiaBangDaKaShiajin.BackColor = System.Drawing.Color.Transparent;
             this.XiaBangDaKaShiajin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.XiaBangDaKaShiajin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.XiaBangDaKaShiajin.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F, System.Drawing.FontStyle.Bold);
             this.XiaBangDaKaShiajin.Location = new System.Drawing.Point(0, 0);
             this.XiaBangDaKaShiajin.Margin = new System.Windows.Forms.Padding(0);
             this.XiaBangDaKaShiajin.Name = "XiaBangDaKaShiajin";
-            this.XiaBangDaKaShiajin.Size = new System.Drawing.Size(119, 22);
+            this.XiaBangDaKaShiajin.Size = new System.Drawing.Size(116, 22);
             this.XiaBangDaKaShiajin.TabIndex = 14;
             this.XiaBangDaKaShiajin.Text = "打卡时间00:00";
             this.XiaBangDaKaShiajin.Visible = false;
@@ -228,7 +228,7 @@
             this.ButShangBan.DownBack = null;
             this.ButShangBan.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(241)))));
             this.ButShangBan.FadeGlow = false;
-            this.ButShangBan.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.ButShangBan.Font = new System.Drawing.Font("阿里巴巴普惠体", 15F);
             this.ButShangBan.ForeColor = System.Drawing.Color.White;
             this.ButShangBan.IsDrawBorder = false;
             this.ButShangBan.IsDrawGlass = false;
@@ -254,7 +254,7 @@
             this.ButXiaBan.DownBack = null;
             this.ButXiaBan.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(241)))));
             this.ButXiaBan.FadeGlow = false;
-            this.ButXiaBan.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.ButXiaBan.Font = new System.Drawing.Font("阿里巴巴普惠体", 15F);
             this.ButXiaBan.ForeColor = System.Drawing.Color.White;
             this.ButXiaBan.IsDrawBorder = false;
             this.ButXiaBan.IsDrawGlass = false;
@@ -281,7 +281,7 @@
             this.ButShangBanG.DownBack = null;
             this.ButShangBanG.DownBaseColor = System.Drawing.Color.Transparent;
             this.ButShangBanG.FadeGlow = false;
-            this.ButShangBanG.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.ButShangBanG.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.ButShangBanG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(126)))), ((int)(((byte)(163)))));
             this.ButShangBanG.IsDrawBorder = false;
             this.ButShangBanG.IsDrawGlass = false;
@@ -307,7 +307,7 @@
             this.ButXiaBanG.DownBack = null;
             this.ButXiaBanG.DownBaseColor = System.Drawing.Color.Transparent;
             this.ButXiaBanG.FadeGlow = false;
-            this.ButXiaBanG.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.ButXiaBanG.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.ButXiaBanG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(126)))), ((int)(((byte)(163)))));
             this.ButXiaBanG.IsDrawBorder = false;
             this.ButXiaBanG.IsDrawGlass = false;
@@ -342,10 +342,10 @@
             // ShiJIan
             // 
             this.ShiJIan.AutoSize = true;
-            this.ShiJIan.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.ShiJIan.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F);
             this.ShiJIan.Location = new System.Drawing.Point(8, 6);
             this.ShiJIan.Name = "ShiJIan";
-            this.ShiJIan.Size = new System.Drawing.Size(89, 20);
+            this.ShiJIan.Size = new System.Drawing.Size(84, 21);
             this.ShiJIan.TabIndex = 0;
             this.ShiJIan.Text = "HH:MM:SS";
             // 
@@ -382,7 +382,7 @@
             this.ChiDao.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.ChiDao.Dock = System.Windows.Forms.DockStyle.Left;
             this.ChiDao.DownBack = null;
-            this.ChiDao.Location = new System.Drawing.Point(119, 0);
+            this.ChiDao.Location = new System.Drawing.Point(116, 0);
             this.ChiDao.MouseBack = null;
             this.ChiDao.Name = "ChiDao";
             this.ChiDao.NormlBack = null;
@@ -398,11 +398,11 @@
             this.skinLabel3.AutoSize = true;
             this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.skinLabel3.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F, System.Drawing.FontStyle.Bold);
             this.skinLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(73)))));
             this.skinLabel3.Location = new System.Drawing.Point(3, 3);
             this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(39, 19);
+            this.skinLabel3.Size = new System.Drawing.Size(40, 21);
             this.skinLabel3.TabIndex = 0;
             this.skinLabel3.Text = "迟到";
             // 
@@ -411,11 +411,11 @@
             this.ShangBangDaKaShiajin.AutoSize = true;
             this.ShangBangDaKaShiajin.BackColor = System.Drawing.Color.Transparent;
             this.ShangBangDaKaShiajin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ShangBangDaKaShiajin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.ShangBangDaKaShiajin.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F, System.Drawing.FontStyle.Bold);
             this.ShangBangDaKaShiajin.Location = new System.Drawing.Point(0, 0);
             this.ShangBangDaKaShiajin.Margin = new System.Windows.Forms.Padding(0);
             this.ShangBangDaKaShiajin.Name = "ShangBangDaKaShiajin";
-            this.ShangBangDaKaShiajin.Size = new System.Drawing.Size(119, 22);
+            this.ShangBangDaKaShiajin.Size = new System.Drawing.Size(116, 22);
             this.ShangBangDaKaShiajin.TabIndex = 15;
             this.ShangBangDaKaShiajin.Text = "打卡时间00:00";
             this.ShangBangDaKaShiajin.Visible = false;
@@ -437,7 +437,7 @@
             this.ZaoTui.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.ZaoTui.Dock = System.Windows.Forms.DockStyle.Left;
             this.ZaoTui.DownBack = null;
-            this.ZaoTui.Location = new System.Drawing.Point(119, 0);
+            this.ZaoTui.Location = new System.Drawing.Point(116, 0);
             this.ZaoTui.MouseBack = null;
             this.ZaoTui.Name = "ZaoTui";
             this.ZaoTui.NormlBack = null;
@@ -453,11 +453,11 @@
             this.skinLabel2.AutoSize = true;
             this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.skinLabel2.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F, System.Drawing.FontStyle.Bold);
             this.skinLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(73)))));
             this.skinLabel2.Location = new System.Drawing.Point(3, 3);
             this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(39, 19);
+            this.skinLabel2.Size = new System.Drawing.Size(40, 21);
             this.skinLabel2.TabIndex = 0;
             this.skinLabel2.Text = "早退";
             // 

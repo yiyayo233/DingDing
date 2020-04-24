@@ -63,10 +63,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.label1.Location = new System.Drawing.Point(24, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 21);
+            this.label1.Size = new System.Drawing.Size(154, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "创建企业/组织/团队";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
@@ -97,7 +97,7 @@
             this.skinButton1.DownBack = null;
             this.skinButton1.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.skinButton1.FadeGlow = false;
-            this.skinButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.skinButton1.ForeColor = System.Drawing.Color.White;
             this.skinButton1.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.skinButton1.IsDrawBorder = false;
@@ -124,7 +124,7 @@
             this.ButFaXiaoXi.DownBack = null;
             this.ButFaXiaoXi.DownBaseColor = System.Drawing.Color.White;
             this.ButFaXiaoXi.FadeGlow = false;
-            this.ButFaXiaoXi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButFaXiaoXi.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.ButFaXiaoXi.ForeColor = System.Drawing.Color.Black;
             this.ButFaXiaoXi.IsDrawGlass = false;
             this.ButFaXiaoXi.Location = new System.Drawing.Point(410, 169);
@@ -163,7 +163,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.label3.Font = new System.Drawing.Font("阿里巴巴普惠体", 9F);
             this.label3.Location = new System.Drawing.Point(35, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 17);
@@ -214,10 +214,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.label2.Font = new System.Drawing.Font("阿里巴巴普惠体", 9F);
             this.label2.Location = new System.Drawing.Point(35, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 17);
+            this.label2.Size = new System.Drawing.Size(140, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "创建企业/组织/团队名称";
             // 

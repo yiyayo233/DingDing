@@ -17,30 +17,10 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        /// <summary>
-        /// 用户ld
-        /// </summary>
         public string Yh_ld = "";
 
-        /// <summary>
-        /// 上班考勤时间
-        /// </summary>
         public string SBKQSJ = "";
-
-        /// <summary>
-        /// 下班考勤时间
-        /// </summary>
         public string XBKQSJ = "";
-
-        /// <summary>
-        /// 上班时间
-        /// </summary>
-        string sbsj = "";
-        /// <summary>
-        /// 上班日期
-        /// </summary>
-        string sbrq = "";
-
 
         public FrmKaoQin()
         {
@@ -53,11 +33,7 @@ namespace WindowsFormsApp1
             ChuShiHuaYinPing();
             ShiFouDaKa();
         }
-        /// <summary>
-        /// 更改框框时间
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             ShiJIan.Text = DateTime.Now.ToString();
@@ -92,12 +68,12 @@ namespace WindowsFormsApp1
             }
             
         }
-        
+
+
+
+        string sbsj = "";
+        string sbrq = "";
         #region 上班打卡
-        /// <summary>
-        /// 上班打卡
-        /// </summary>
-        /// <param name="pd">判断是否修改上班打卡时间</param>
         public void ShangBanDaKa(int pd)
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -179,10 +155,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 下班打卡
-        /// <summary>
-        /// 下班打卡
-        /// </summary>
-        /// <param name="pd">判断是否修改下班打卡时间</param>
         public void XiaBanDaKa(int pd)
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -255,10 +227,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 截取时间
-        /// <summary>
-        /// 截取时间
-        /// </summary>
-        /// <returns>返回时间</returns>
         public string JieQvShiJian() {
             DateTime dateTime = DateTime.Now;
             string time = string.Format("{0:t}", dateTime);
@@ -267,10 +235,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region 截取日期
-        /// <summary>
-        /// 截取日期
-        /// </summary>
-        /// <returns>返回日期</returns>
         public string JieQvRiQi()
         {
             string dateTime = DateTime.Now.ToString();
@@ -281,10 +245,7 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region 判断当天是否打卡
-        /// <summary>
-        /// 判断当天是否打卡
-        /// </summary>
+        #region 当天是否打卡
         public void ShiFouDaKa() {
             int pd = 0;
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -336,11 +297,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 当天是否打卡对控件的操作
-        /// <summary>
-        /// 当天是否打卡对控件的操作
-        /// </summary>
-        /// <param name="pd">判断是否下班打卡</param>
+        #region 当天是否打卡 事件
         public void ShiFouDaKaSG(int pd) {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try
@@ -429,10 +386,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 初始化考勤时间、音频
-        /// <summary>
-        /// 初始化考勤时间、音频
-        /// </summary>
+        #region 初始化考勤时间&音频
         public void ChuShiHuaYinPing() {
 
             ShiJIan.Text = DateTime.Now.ToString();

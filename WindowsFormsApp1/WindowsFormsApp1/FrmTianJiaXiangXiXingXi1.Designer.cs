@@ -75,7 +75,7 @@
             this.ButFaXiaoXi.DownBack = null;
             this.ButFaXiaoXi.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.ButFaXiaoXi.FadeGlow = false;
-            this.ButFaXiaoXi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButFaXiaoXi.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.ButFaXiaoXi.ForeColor = System.Drawing.Color.White;
             this.ButFaXiaoXi.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
             this.ButFaXiaoXi.IsDrawBorder = false;
@@ -139,17 +139,17 @@
             // Hyld
             // 
             this.Hyld.AutoSize = true;
-            this.Hyld.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.Hyld.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.Hyld.Location = new System.Drawing.Point(93, 83);
             this.Hyld.Name = "Hyld";
-            this.Hyld.Size = new System.Drawing.Size(107, 20);
+            this.Hyld.Size = new System.Drawing.Size(105, 20);
             this.Hyld.TabIndex = 12;
             this.Hyld.Text = "DingDing0001";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label1.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.label1.Location = new System.Drawing.Point(23, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
@@ -159,17 +159,17 @@
             // HyName2
             // 
             this.HyName2.AutoSize = true;
-            this.HyName2.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.HyName2.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.HyName2.Location = new System.Drawing.Point(93, 43);
             this.HyName2.Name = "HyName2";
-            this.HyName2.Size = new System.Drawing.Size(51, 20);
+            this.HyName2.Size = new System.Drawing.Size(52, 20);
             this.HyName2.TabIndex = 10;
             this.HyName2.Text = "yiyayo";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label12.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
             this.label12.Location = new System.Drawing.Point(23, 123);
             this.label12.Name = "label12";
@@ -180,7 +180,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label10.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
             this.label10.Location = new System.Drawing.Point(23, 83);
             this.label10.Name = "label10";
@@ -191,7 +191,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label11.Font = new System.Drawing.Font("阿里巴巴普惠体", 10F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
             this.label11.Location = new System.Drawing.Point(23, 43);
             this.label11.Name = "label11";
@@ -280,10 +280,10 @@
             // HyName
             // 
             this.HyName.AutoSize = true;
-            this.HyName.Font = new System.Drawing.Font("微软雅黑", 18F);
+            this.HyName.Font = new System.Drawing.Font("阿里巴巴普惠体", 18F);
             this.HyName.Location = new System.Drawing.Point(21, 63);
             this.HyName.Name = "HyName";
-            this.HyName.Size = new System.Drawing.Size(62, 31);
+            this.HyName.Size = new System.Drawing.Size(63, 33);
             this.HyName.TabIndex = 0;
             this.HyName.Text = "昵称";
             this.HyName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);

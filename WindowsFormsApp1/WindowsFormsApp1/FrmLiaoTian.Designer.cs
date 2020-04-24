@@ -75,7 +75,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.textBox1.Font = new System.Drawing.Font("阿里巴巴普惠体", 12F);
             this.textBox1.Location = new System.Drawing.Point(13, 13);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -144,7 +144,7 @@
             this.GongSiName.AutoSize = true;
             this.GongSiName.BackColor = System.Drawing.Color.Transparent;
             this.GongSiName.BorderColor = System.Drawing.Color.White;
-            this.GongSiName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.GongSiName.Font = new System.Drawing.Font("阿里巴巴普惠体", 9F);
             this.GongSiName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(164)))), ((int)(((byte)(166)))));
             this.GongSiName.Location = new System.Drawing.Point(87, 34);
             this.GongSiName.Name = "GongSiName";
@@ -157,10 +157,10 @@
             this.ShuoXinRenName.AutoSize = true;
             this.ShuoXinRenName.BackColor = System.Drawing.Color.Transparent;
             this.ShuoXinRenName.BorderColor = System.Drawing.Color.White;
-            this.ShuoXinRenName.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.ShuoXinRenName.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F);
             this.ShuoXinRenName.Location = new System.Drawing.Point(85, 14);
             this.ShuoXinRenName.Name = "ShuoXinRenName";
-            this.ShuoXinRenName.Size = new System.Drawing.Size(84, 20);
+            this.ShuoXinRenName.Size = new System.Drawing.Size(85, 21);
             this.ShuoXinRenName.TabIndex = 3;
             this.ShuoXinRenName.Text = "收信人名称";
             // 
@@ -225,7 +225,7 @@
             this.butFaSong.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.butFaSong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.butFaSong.DownBack = null;
-            this.butFaSong.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.butFaSong.Font = new System.Drawing.Font("阿里巴巴普惠体", 11F);
             this.butFaSong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.butFaSong.InnerBorderColor = System.Drawing.Color.Transparent;
             this.butFaSong.Location = new System.Drawing.Point(747, 6);
@@ -267,10 +267,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(846, 1);
             this.panel3.TabIndex = 14;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmLiaoTian
             // 
