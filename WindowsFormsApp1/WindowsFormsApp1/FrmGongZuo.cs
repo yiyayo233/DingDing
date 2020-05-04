@@ -23,7 +23,6 @@ namespace WindowsFormsApp1
         /// </summary>
         public string Yh_ld = "";
 
-
         #region 改变考勤背景颜色
         private void panelKaoQing_MouseEnter(object sender, EventArgs e)
         {

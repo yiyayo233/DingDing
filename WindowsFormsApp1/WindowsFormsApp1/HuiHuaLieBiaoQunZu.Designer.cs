@@ -68,10 +68,9 @@
             // DuiHuaRenANDXinXi
             // 
             this.DuiHuaRenANDXinXi.Controls.Add(this.Txt_XiaoXi);
-            this.DuiHuaRenANDXinXi.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DuiHuaRenANDXinXi.Location = new System.Drawing.Point(75, 37);
             this.DuiHuaRenANDXinXi.Name = "DuiHuaRenANDXinXi";
-            this.DuiHuaRenANDXinXi.Size = new System.Drawing.Size(113, 23);
+            this.DuiHuaRenANDXinXi.Size = new System.Drawing.Size(164, 23);
             this.DuiHuaRenANDXinXi.TabIndex = 28;
             this.DuiHuaRenANDXinXi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HuiHuaLieBiaoQunZu_MouseDown);
             this.DuiHuaRenANDXinXi.MouseEnter += new System.EventHandler(this.HuiHuaLieBiaoQunZu_MouseEnter);

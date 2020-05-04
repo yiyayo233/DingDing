@@ -268,6 +268,10 @@
             this.panel3.Size = new System.Drawing.Size(846, 1);
             this.panel3.TabIndex = 14;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmLiaoTian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);

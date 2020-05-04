@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WinformBubble;
 using System.Data.SqlClient;
 using System.Reflection;
+using CCWin.SkinClass;
 
 namespace WindowsFormsApp1
 {
@@ -237,6 +238,14 @@ namespace WindowsFormsApp1
 
         #region 查找消息
         /// <summary>
+        /// 你与好友之间发送的消息总数
+        /// </summary>
+        int indexY = 0;
+        /// <summary>
+        /// 群组成员(包括自己)发送的消息总数
+        /// </summary>
+        int indexQ = -1;
+        /// <summary>
         /// 查找消息
         /// </summary>
         public void CheckXinXi()
@@ -264,6 +273,7 @@ namespace WindowsFormsApp1
                     }
 
                     adapter.Fill(dataSet, "XxY");
+                    indexY = dataSet.Tables["XxY"].Rows.Count.ToInt32();
 
                     for (int i = 0; i < dataSet.Tables["XxY"].Rows.Count; i++)
                     {
@@ -293,6 +303,7 @@ namespace WindowsFormsApp1
                     }
 
                     adapter.Fill(dataSet, "XxQ");
+                    indexQ = dataSet.Tables["XxQ"].Rows.Count.ToInt32();
 
                     for (int i = 0; i < dataSet.Tables["XxQ"].Rows.Count; i++)
                     {
@@ -435,38 +446,7 @@ namespace WindowsFormsApp1
             height = 0;
         }
         #endregion
-
-        #region 判断是否是收信群 废
-        /*public void IfSuoXinQun()
-        {
-            SqlConnection sqlConnection = new SqlConnection(strcon);
-            try
-            {
-                StringBuilder selectYh = new StringBuilder();
-                selectYh.AppendFormat("select COUNT(*) ");
-                selectYh.AppendFormat("from Yh ");
-                selectYh.AppendFormat("where Yh_Id = '{0}'", sxld);
-                sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand(selectYh.ToString(), sqlConnection);
-                string pd = sqlCommand.ExecuteScalar().ToString();
-                if (pd.Equals("0"))
-                {
-                    i = 2;
-                }
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
-        }*/
-        #endregion
-
+        
         #region 初始化
         /// <summary>
         /// 初始化
@@ -497,18 +477,144 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 刷新聊天消息
+        #region 实时刷新消息
         /// <summary>
-        /// 刷新聊天学习
+        /// 刷新消息
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Emptypanel1();
-            ShuaXin();
-            ChuShiHua();
+            CheckXinXi(1);
         }
+
+        #region 刷新消息
+        /// <summary>
+        /// 查找消息
+        /// <para>实现方法：首先在页面加载(以下都叫初始化)时，获取你与好友之间(群组成员(包括自己))发送的消息总数,再在实时刷新时获取消息总数。如果实时刷新时获取的消息总数 大于 初始化时获取的消息总数，则添加新的气泡</para>
+        /// <para>注意事项：1.不管发消息的是谁都要 给 初始化时获取的消息总数 加1。</para>
+        /// </summary>
+        /// <param name="z">没有实际用处只是用来区分方法</param>
+        public void CheckXinXi(int z)
+        {
+            SqlConnection sqlConnection = new SqlConnection(strcon);
+            try
+            {
+                IfSuoXinQun();
+                StringBuilder selectXinXi = new StringBuilder();
+                //判断是否是群消息
+                if (i == 1)
+                {
+                    selectXinXi.AppendFormat("select *");
+                    selectXinXi.AppendFormat("from Xx ");
+                    selectXinXi.AppendFormat("where Xx_Sxld = '{0}' ", sxld);
+                    selectXinXi.AppendFormat("and Xx_Fsld  = '{0}'", fsld);
+                    selectXinXi.AppendFormat("or Xx_Sxld = '{0}'", fsld);
+                    selectXinXi.AppendFormat("and Xx_Fsld  ='{0}'", sxld);
+                    selectXinXi.AppendFormat("order by Xx_fssj");
+
+                    adapter = new SqlDataAdapter(selectXinXi.ToString(), sqlConnection);
+
+                    if (dataSet.Tables["XxY"] != null)
+                    {
+                        dataSet.Tables["XxY"].Clear();
+                    }
+
+                    adapter.Fill(dataSet, "XxY");
+
+                    int index = dataSet.Tables["XxY"].Rows.Count.ToInt32();
+                    if (indexY < index)
+                    {
+                        if (!dataSet.Tables["XxY"].Rows[index - 1][4].ToString().Equals(fsld))
+                        {
+                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[index - 1][2].ToString(), "TFDNDSFJIF");
+                        }
+                        indexY++;
+                    }
+                }
+                else
+                {
+                    selectXinXi.AppendFormat("select *");
+                    selectXinXi.AppendFormat("from XxQ ");
+                    selectXinXi.AppendFormat("where XxQ_Sxld = '{0}' ", sxld);
+                    selectXinXi.AppendFormat("order by XxQ_fssj");
+
+                    adapter = new SqlDataAdapter(selectXinXi.ToString(), sqlConnection);
+
+                    if (dataSet.Tables["XxQ"] != null)
+                    {
+                        dataSet.Tables["XxQ"].Clear();
+                    }
+
+                    adapter.Fill(dataSet, "XxQ");
+
+                    int index = dataSet.Tables["XxQ"].Rows.Count.ToInt32();
+                    if (indexQ < index)
+                    {
+                        if (!dataSet.Tables["XxQ"].Rows[index - 1][4].ToString().Equals(fsld))
+                        {
+                            StringBuilder selectYh = new StringBuilder();
+                            selectYh.AppendFormat("select * ");
+                            selectYh.AppendFormat("from Yh ");
+                            selectYh.AppendFormat("where Yh_Id = '{0}'", dataSet.Tables["XxQ"].Rows[index - 1][4].ToString());
+                            adapter = new SqlDataAdapter(selectYh.ToString(), sqlConnection);
+                            if (dataSet.Tables["FxYh"] != null)
+                            {
+                                dataSet.Tables["FxYh"].Clear();
+                            }
+
+                            adapter.Fill(dataSet, "FxYh");
+
+                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[index - 1][2].ToString(), dataSet.Tables["FxYh"].Rows[0][1].ToString());
+                        }
+                        indexQ++;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+            }
+        }
+        #endregion
+
+        #region 判断是否是收信群
+        /// <summary>
+        /// 判断是否是收信群
+        /// </summary>
+        public void IfSuoXinQun()
+        {
+            SqlConnection sqlConnection = new SqlConnection(strcon);
+            try
+            {
+                StringBuilder selectYh = new StringBuilder();
+                selectYh.AppendFormat("select COUNT(*) ");
+                selectYh.AppendFormat("from Yh ");
+                selectYh.AppendFormat("where Yh_Id = '{0}'", sxld);
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand(selectYh.ToString(), sqlConnection);
+                string pd = sqlCommand.ExecuteScalar().ToString();
+                if (pd.Equals("0"))
+                {
+                    i = 2;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
+        #endregion
+
         #endregion
 
     }

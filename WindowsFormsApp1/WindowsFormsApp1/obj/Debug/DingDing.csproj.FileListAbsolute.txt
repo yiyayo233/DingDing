@@ -215,3 +215,10 @@ H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\DingDing.csproj.G
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\DingDing.csproj.CoreCompileInputs.cache
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\CSkin.xml
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Interop.WMPLib.dll
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AxInterop.WMPLib.dll
+H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\DingDing.csproj.CopyComplete
