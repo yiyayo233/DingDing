@@ -19,10 +19,20 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 群昵称
+        /// </summary>
         public string txt_QunZuName = "";
-        public string txt_QunZuRenShu = "";
-        public string chaZhaoYhld = "";
 
+        /// <summary>
+        /// 群人数
+        /// </summary>
+        public string txt_QunZuRenShu = "";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string chaZhaoYhld = "";
 
         private void TongXunQunZu_Load(object sender, EventArgs e)
         {
@@ -70,8 +80,10 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-
         #region 初始化控件
+        /// <summary>
+        /// 初始化控件
+        /// </summary>
         public void UptedaTongXunQunZu()
         {
             foreach (var lb in panel1.Controls)
@@ -83,14 +95,6 @@ namespace WindowsFormsApp1
                     {
                         obj.Text = txt_QunZuName;
                     }
-                }
-            }
-
-            foreach (var lb in panel1.Controls)
-            {
-                if (lb is Label)
-                {
-                    Label obj = lb as Label;   
                     if (obj.Name == "Txt_RenShu")
                     {
                         obj.Text = txt_QunZuRenShu + "人";
@@ -98,21 +102,19 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-
         #endregion
 
         #region 打开聊天窗口
+        /// <summary>
+        /// 打开聊天窗口
+        /// </summary>
         private void ShowLiaoTianChuangKou()
         {
 
             //获得父页面
             Form p = this.Parent.Parent.Parent.Parent.Parent.FindForm();
-
             Type pageType = p.GetType();
-
             //父页面的方法名
-
             MethodInfo mi = pageType.GetMethod("XiaoXi");
             //执行
 

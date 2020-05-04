@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// 这个页面暂时还没用到
+    /// </summary>
     public partial class TeBieGuanZhu : UserControl
     {
         public TeBieGuanZhu()

@@ -37,7 +37,13 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
+        /// <summary>
+        /// 查找用户id
+        /// </summary>
         public string chaZhaoYhld = "";
 
         #region  窗体无边框样式时移动
@@ -103,7 +109,10 @@ namespace WindowsFormsApp1
             UptedaFrmTongXunXiangXiXingXi();
         }
 
-        #region 初始化窗口FrmTongXunXiangXiXingXi
+        #region 初始化窗口
+        /// <summary>
+        /// 初始化窗口  FrmTongXunXiangXiXingXi
+        /// </summary>
         public void UptedaFrmTongXunXiangXiXingXi()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -156,6 +165,9 @@ namespace WindowsFormsApp1
         }
 
         #region 删除好友
+        /// <summary>
+        /// 删除好友
+        /// </summary>
         public void DeleteHy()
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
@@ -184,7 +196,7 @@ namespace WindowsFormsApp1
                     adapter.Fill(dataSet, "Xx");
                     #endregion
 
-                    #region 更新列表
+                    #region 更新我的好友窗口好友列表
                     Control control = paf.Parent.Parent;
                     string s = control.Name;
                     paf.Yh_ld = Yh_ld;
@@ -213,7 +225,9 @@ namespace WindowsFormsApp1
                             }
                         }
                     }
-                    
+                    #endregion
+
+                    #region 更新信息窗口会话列表
                     Control control1 = paf.Parent.Parent.Parent;
                     string s1 = control1.Name;
                     paf.Yh_ld = Yh_ld;
@@ -231,9 +245,6 @@ namespace WindowsFormsApp1
                             }
                         }
                     }
-
-
-
                     #endregion
 
                     this.Close();

@@ -20,15 +20,27 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 用户ld
+        /// </summary>
         public string Yh_ld = "";
 
         #region 三大金刚键
-
+        /// <summary>
+        /// 关闭窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// 最大化和默认大小
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton3_Click(object sender, EventArgs e)
         {
 
@@ -42,6 +54,11 @@ namespace WindowsFormsApp1
             }
         }
 
+        /// <summary>
+        /// 最小化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -104,6 +121,9 @@ namespace WindowsFormsApp1
             XiaoXi();
         }
 
+        /// <summary>
+        /// 显示消息控件
+        /// </summary>
         public void XiaoXi() {
             FrmAllClose();
             frmXinXi1.Yh_ld = Yh_ld;
@@ -121,6 +141,9 @@ namespace WindowsFormsApp1
             GongZuo();
         }
 
+        /// <summary>
+        /// 显示工作菜单
+        /// </summary>
         public void GongZuo()
         {
             FrmAllClose();
@@ -134,6 +157,9 @@ namespace WindowsFormsApp1
         {
             TongXunLu();
         }
+        /// <summary>
+        /// 显示通讯录控件
+        /// </summary>
         public void TongXunLu() {
             FrmAllClose();
             frmTongXunLu1.Yh_ld = Yh_ld;
@@ -142,13 +168,10 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 所有窗口显示
-        private void AllFemVisible() {
-        }
-
-        #endregion
-
         #region 关闭所有窗口
+        /// <summary>
+        /// 关闭所有窗口
+        /// </summary>
         public void FrmAllClose()
         {
             frmXinXi1.Visible = false;
@@ -160,29 +183,12 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-
-        private void SysMain_Load(object sender, EventArgs e)
-        {
-            HouQp();
-        }
-
-        public void HouQp() {
-        }
-
-        #region 日程按钮
-        private void button5_Click(object sender, EventArgs e)
-        {
-            RiCheng();
-        }
-        public void RiCheng() {
-            richeng richeng = new richeng();
-            richeng.Yh_ld = Yh_ld;
-            richeng.Show();
-        }
-
-        #endregion
-
         #region 头像按钮
+        /// <summary>
+        /// 头像按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (this.frmGongZuo1.Visible == true)

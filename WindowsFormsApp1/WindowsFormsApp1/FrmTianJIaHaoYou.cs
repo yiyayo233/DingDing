@@ -23,19 +23,22 @@ namespace WindowsFormsApp1
         public static extern int GetClassLong(IntPtr hwnd, int nIndex);
         #endregion
 
-        public FrmTianJIaHaoYou(XinDeHaoYou parent)  //
+        public FrmTianJIaHaoYou(XinDeHaoYou parent)
         {
             InitializeComponent();
             SetClassLong(this.Handle, GCL_STYLE, GetClassLong(this.Handle, GCL_STYLE) | CS_DropSHADOW);
             paf = parent;
         }
 
-        private XinDeHaoYou paf; //
+        private XinDeHaoYou paf;
 
         static string strcon = "Data Source=.;Initial Catalog=DingDing;Integrated Security=True";
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
 
         #region  窗体无边框样式时移动
@@ -98,6 +101,9 @@ namespace WindowsFormsApp1
         }
 
         #region 提交
+        /// <summary>
+        /// 提交
+        /// </summary>
         public void TiJiao() {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try
@@ -119,8 +125,9 @@ namespace WindowsFormsApp1
                     selectHy.AppendFormat("and Hy_Hyld  = '{0}' ", dataSet.Tables["Yh"].Rows[0][0].ToString());
                     adapter = new SqlDataAdapter(selectHy.ToString(), sqlConnection);
                     adapter.Fill(dataSet, "Hy");
-                    if (dataSet.Tables["Hy"].Rows.Count == 0)
+                    if (dataSet.Tables["Hy"].Rows.Count == 0)   //判断是否已经加该用户为好友
                     {
+                        //添加好友窗口
                         FrmTianJiaXiangXiXingXi frmTianJiaXiangXiXingXi = new FrmTianJiaXiangXiXingXi(paf);
                         frmTianJiaXiangXiXingXi.Yh_ld = Yh_ld;
                         frmTianJiaXiangXiXingXi.chaZhaoYhld = dataSet.Tables["Yh"].Rows[0][0].ToString();
@@ -128,6 +135,7 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
+                        //查看好友详细信息窗口
                         FrmTongXunXiangXiXingXi frmTongXunXiangXiXingXi = new FrmTongXunXiangXiXingXi(paf);
                         frmTongXunXiangXiXingXi.Yh_ld = Yh_ld;
                         frmTongXunXiangXiXingXi.chaZhaoYhld = dataSet.Tables["Yh"].Rows[0][0].ToString();

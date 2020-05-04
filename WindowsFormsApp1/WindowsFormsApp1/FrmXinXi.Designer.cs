@@ -216,7 +216,6 @@
             this.ButJiaHao.TabIndex = 8;
             this.ButJiaHao.UseVisualStyleBackColor = false;
             this.ButJiaHao.Visible = false;
-            this.ButJiaHao.Click += new System.EventHandler(this.ButJiaHao_Click);
             this.ButJiaHao.MouseEnter += new System.EventHandler(this.ButJiaHao_MouseEnter);
             this.ButJiaHao.MouseLeave += new System.EventHandler(this.ButJiaHao_MouseLeave);
             // 

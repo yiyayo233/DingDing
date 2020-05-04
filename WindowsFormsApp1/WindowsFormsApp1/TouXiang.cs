@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace WinformBubble
 {
+    /// <summary>
+    /// 这控件已报废
+    /// </summary>
     public partial class TouXiang : UserControl
     {
         /// <summary>

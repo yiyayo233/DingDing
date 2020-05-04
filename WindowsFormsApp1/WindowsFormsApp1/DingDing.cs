@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using WindowsFormsApp1;
+using CCWin;
 
 namespace 钉钉
 {
@@ -23,6 +24,11 @@ namespace 钉钉
         SqlDataAdapter adapter = new SqlDataAdapter();
 
         #region 初始化
+        /// <summary>
+        /// 初始化下拉列表
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 钉钉_Load(object sender, EventArgs e)
         {
             txt_haoma.Text = "请输入手机号";
@@ -37,11 +43,17 @@ namespace 钉钉
         #endregion
 
         #region 修改密码
+        /// <summary>
+        /// 忘记密码 部分功能暂时不支持
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label1_Click(object sender, EventArgs e)
         {
-            wangjimima tz = new wangjimima();
+            //忘记密码部分功能暂时不支持
+            /*wangjimima tz = new wangjimima();
             tz.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void label1_MouseEnter(object sender, EventArgs e)
@@ -92,6 +104,11 @@ namespace 钉钉
         #endregion
 
         #region 登录
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton1_Click(object sender, EventArgs e)
         {
             if (this.txt_haoma.Text.Trim() == "请输入手机号")
@@ -146,11 +163,21 @@ namespace 钉钉
         #endregion
 
         #region 两大金刚键
+        /// <summary>
+        /// 关闭
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton9_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 最小化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton8_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

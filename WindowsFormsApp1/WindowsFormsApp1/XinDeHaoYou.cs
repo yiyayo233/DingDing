@@ -11,6 +11,9 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// 这才是 我的好友 页面(控件)
+    /// </summary>
     public partial class XinDeHaoYou : UserControl
     {
         public XinDeHaoYou()
@@ -22,6 +25,9 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
 
         private void XinDeHaoYou_Load(object sender, EventArgs e)
@@ -29,9 +35,9 @@ namespace WindowsFormsApp1
             CheckHaoYou();
         }
 
-        #region 查询好友、初始化&添加tongXunHaoYou控件
+        #region 查询好友、初始化、添加tongXunHaoYou控件
         /// <summary>
-        /// 查询好友、初始化&添加tongXunHaoYou控件
+        /// 查询好友、初始化、添加tongXunHaoYou控件
         /// </summary>
         public void CheckHaoYou()
         {
@@ -93,6 +99,11 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        /// <summary>
+        /// 添加好友
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skinButton1_Click(object sender, EventArgs e)
         {
             FrmTianJIaHaoYou frmTianJIaHaoYou = new FrmTianJIaHaoYou(this);

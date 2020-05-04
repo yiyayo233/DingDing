@@ -11,6 +11,9 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// 这个页面本来是请假页面后来改为更多页面     
+    /// </summary>
     public partial class FrmQingJia : UserControl
     {
         public FrmQingJia()
@@ -18,6 +21,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 用户ld
+        /// </summary>
         public string Yh_ld = "";
 
         static string strcon = "Data Source=.;Initial Catalog=DingDing;Integrated Security=True";

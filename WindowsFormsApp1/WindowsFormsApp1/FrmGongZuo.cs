@@ -18,13 +18,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 用户ld
+        /// </summary>
         public string Yh_ld = "";
 
-        private void FrmGongZuo_Load(object sender, EventArgs e)
-        {
-        }
 
-        #region 改变 各框框 背景颜色
+        #region 改变考勤背景颜色
         private void panelKaoQing_MouseEnter(object sender, EventArgs e)
         {
             if (this.panelKaoQing.BackColor != System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
+        #endregion
 
         private void panelQingJIa_MouseEnter(object sender, EventArgs e)
         {
@@ -57,6 +57,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        #region 改变更多背景颜色
         private void panelQingJIa_MouseLeave(object sender, EventArgs e)
         {
             if (this.panelQingJIa.BackColor == System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(240))))))
@@ -73,11 +74,21 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        /// <summary>
+        /// 考勤
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panelKaoQing_Click(object sender, EventArgs e)
         {
             ShowKaoQing();
         }
 
+        /// <summary>
+        /// 更多
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panelQingJIa_Click(object sender, EventArgs e)
         {
             ShowQingJIa();

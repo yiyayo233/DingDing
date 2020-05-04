@@ -22,6 +22,9 @@ namespace WindowsFormsApp1
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
+        /// <summary>
+        /// 用户id
+        /// </summary>
         public string Yh_ld = "";
 
         private void ButFaXiaoXi_Click(object sender, EventArgs e)
@@ -35,6 +38,9 @@ namespace WindowsFormsApp1
         }
 
         #region 提交
+        /// <summary>
+        /// 提交（修改密码）
+        /// </summary>
         private void TiJiao() {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try
