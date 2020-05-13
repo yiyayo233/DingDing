@@ -104,26 +104,26 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region 打开好友信息1窗口
+        #region 打开好友信息窗口
         /// <summary>
-        /// 打开好友信息1窗口
+        /// 打开好友信息窗口
         /// </summary>
         private void ShowFrmTongXunXiangXiXingXi()
         {
-            FrmTongXunXiangXiXingXi1 frmTongXunXiangXiXingXi1 = new FrmTongXunXiangXiXingXi1(paf);
+            FrmTongXunXiangXiXingXi frmTongXunXiangXiXingXi1 = new FrmTongXunXiangXiXingXi(paf);
             frmTongXunXiangXiXingXi1.Yh_ld = Yh_ld;
             frmTongXunXiangXiXingXi1.chaZhaoYhld = chaZhaoYhld;
             frmTongXunXiangXiXingXi1.Show();
         }
         #endregion
 
-        #region 打开添加好友1窗口
+        #region 打开添加好友窗口
         /// <summary>
-        /// 打开添加好友1窗口
+        /// 打开添加好友窗口
         /// </summary>
         private void ShowFrmTianJiaXiangXiXingXi1()
         {
-            FrmTianJiaXiangXiXingXi1 frmTianJiaXiangXiXingXi1 = new FrmTianJiaXiangXiXingXi1(paf);
+            FrmTianJiaXiangXiXingXi frmTianJiaXiangXiXingXi1 = new FrmTianJiaXiangXiXingXi(paf);
             frmTianJiaXiangXiXingXi1.Yh_ld = Yh_ld;
             frmTianJiaXiangXiXingXi1.chaZhaoYhld = chaZhaoYhld;
             frmTianJiaXiangXiXingXi1.Show();

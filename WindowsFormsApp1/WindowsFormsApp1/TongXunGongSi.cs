@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
                     adapter.Fill(dataSet, "Yh");
 
                     #region 初始化控件&添加
-                    TongXunHaoYou1 tongXunHaoYou1 = new TongXunHaoYou1(this);
+                    TongXunHaoYou tongXunHaoYou1 = new TongXunHaoYou(this);
                     tongXunHaoYou1.txt_HaoYouName = dataSet.Tables["Yh"].Rows[0][1].ToString();
                     tongXunHaoYou1.Yh_ld = Yh_ld;
                     tongXunHaoYou1.chaZhaoYhld = dataSet.Tables["Yh"].Rows[0][0].ToString();

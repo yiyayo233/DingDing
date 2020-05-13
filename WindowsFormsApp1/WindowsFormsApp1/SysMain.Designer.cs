@@ -633,6 +633,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SysMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SysMain_Load);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

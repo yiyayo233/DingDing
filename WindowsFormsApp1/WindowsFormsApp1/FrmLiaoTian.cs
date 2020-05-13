@@ -521,15 +521,17 @@ namespace WindowsFormsApp1
                     }
 
                     adapter.Fill(dataSet, "XxY");
-
+                    //实时消息总数
                     int index = dataSet.Tables["XxY"].Rows.Count.ToInt32();
+                    //实时消息总数判断加载消息总数 是否大于 判断加载消息总数
                     if (indexY < index)
                     {
                         if (!dataSet.Tables["XxY"].Rows[index - 1][4].ToString().Equals(fsld))
                         {
+                            //添加新的气泡
                             AddReceiveMessage(dataSet.Tables["XxY"].Rows[index - 1][2].ToString(), "TFDNDSFJIF");
                         }
-                        indexY++;
+                        indexY++;   //加载消息总数自增
                     }
                 }
                 else

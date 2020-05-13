@@ -34,6 +34,16 @@ namespace WindowsFormsApp1
 
         private XinDeHaoYou paf;
 
+        public FrmTongXunXiangXiXingXi(TongXunGongSi parent)
+        {
+            InitializeComponent();
+            SetClassLong(this.Handle, GCL_STYLE, GetClassLong(this.Handle, GCL_STYLE) | CS_DropSHADOW);
+            paf1 = parent;
+        }
+        private TongXunGongSi paf1;
+
+
+
         static string strcon = "Data Source=.;Initial Catalog=DingDing;Integrated Security=True";
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
@@ -148,12 +158,6 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        /* #region 打开聊天窗口
-         public void ShowLiaoTian() {
-             this.Close();
-         }
-         #endregion*/
-
         private void skinButton9_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -195,35 +199,14 @@ namespace WindowsFormsApp1
                     adapter.Fill(dataSet, "Xx");
                     #endregion
 
-                    #region 更新列表
-                    Control control = paf;
-                    string s = control.Name;
-                    paf.Yh_ld = Yh_ld;
-                    Type pageType1 = control.GetType();
-                    //父页面的方法名
-                    MethodInfo mi1 = pageType1.GetMethod("CheckHaoYou");
-                    mi1.Invoke(control, null);
-                    #endregion
-
-                    #region 更新信息页面会话列表
-                    Control control1 = paf.Parent.Parent.Parent;
-                    string s1 = control1.Name;
-                    paf.Yh_ld = Yh_ld;
-                    foreach (var lb in control1.Controls)
+                    if (paf != null)
                     {
-                        if (lb is FrmXinXi)
-                        {
-                            FrmXinXi frmXinXi = lb as FrmXinXi;
-                            if (frmXinXi.Name == "frmXinXi1")
-                            {
-                                Type pageType = frmXinXi.GetType();
-                                //父页面的方法名
-                                MethodInfo mi = pageType.GetMethod("ChuShiHua");
-                                mi.Invoke(frmXinXi, null);
-                            }
-                        }
+                        ShuaXing(paf);
                     }
-                    #endregion
+                    else
+                    {
+                        ShuaXing(paf1);
+                    }
 
                     this.Close();
                 }
@@ -233,6 +216,93 @@ namespace WindowsFormsApp1
 
                 throw;
             }
+        }
+        #endregion
+
+        #region 刷新
+        public void ShuaXing(XinDeHaoYou xinDe) {
+            #region 更新列表
+            Control control = xinDe;
+            string s = control.Name;
+            xinDe.Yh_ld = Yh_ld;
+            Type pageType1 = control.GetType();
+            //父页面的方法名
+            MethodInfo mi1 = pageType1.GetMethod("CheckHaoYou");
+            mi1.Invoke(control, null);
+            #endregion
+
+            #region 更新信息页面会话列表
+            Control control1 = xinDe.Parent.Parent.Parent;
+            string s1 = control1.Name;
+            xinDe.Yh_ld = Yh_ld;
+            foreach (var lb in control1.Controls)
+            {
+                if (lb is FrmXinXi)
+                {
+                    FrmXinXi frmXinXi = lb as FrmXinXi;
+                    if (frmXinXi.Name == "frmXinXi1")
+                    {
+                        Type pageType = frmXinXi.GetType();
+                        //父页面的方法名
+                        MethodInfo mi = pageType.GetMethod("ChuShiHua");
+                        mi.Invoke(frmXinXi, null);
+                    }
+                }
+            }
+            #endregion
+        }
+
+        public void ShuaXing(TongXunGongSi tongXun) {
+            #region 更新我的好友窗口好友列表
+            Control control = tongXun.Parent.Parent;
+            string s = control.Name;
+            tongXun.Yh_ld = Yh_ld;
+
+            foreach (var bl in control.Controls)
+            {
+                if (bl is Panel)
+                {
+                    Panel panel = bl as Panel;
+                    if (panel.Name == "panel1")
+                    {
+                        foreach (var bl1 in panel.Controls)
+                        {
+                            if (bl1 is XinDeHaoYou)
+                            {
+                                XinDeHaoYou xinDeHaoYou = bl1 as XinDeHaoYou;
+                                if (xinDeHaoYou.Name == "xinDeHaoYou1")
+                                {
+                                    Type pageType1 = xinDeHaoYou.GetType();
+                                    //父页面的方法名
+                                    MethodInfo mi1 = pageType1.GetMethod("CheckHaoYou");
+                                    mi1.Invoke(xinDeHaoYou, null);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            #region 更新信息窗口会话列表
+            Control control1 = tongXun.Parent.Parent.Parent;
+            string s1 = control1.Name;
+            tongXun.Yh_ld = Yh_ld;
+            foreach (var lb in control1.Controls)
+            {
+                if (lb is FrmXinXi)
+                {
+                    FrmXinXi frmXinXi = lb as FrmXinXi;
+                    if (frmXinXi.Name == "frmXinXi1")
+                    {
+                        Type pageType = frmXinXi.GetType();
+                        //父页面的方法名
+                        MethodInfo mi = pageType.GetMethod("ChuShiHua");
+                        mi.Invoke(frmXinXi, null);
+                    }
+                }
+            }
+            #endregion
         }
         #endregion
     }

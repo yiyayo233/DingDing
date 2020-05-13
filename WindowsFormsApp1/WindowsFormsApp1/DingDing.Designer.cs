@@ -261,9 +261,9 @@
             this.txt_mima.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(166)))), ((int)(((byte)(170)))));
             this.txt_mima.Location = new System.Drawing.Point(35, 222);
             this.txt_mima.Name = "txt_mima";
-            this.txt_mima.PasswordChar = '*';
             this.txt_mima.Size = new System.Drawing.Size(230, 21);
             this.txt_mima.TabIndex = 11;
+            this.txt_mima.Text = "请输入密码";
             this.txt_mima.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txt_mima_Enter);
             this.txt_mima.MouseLeave += new System.EventHandler(this.txt_mima_Leave);
             // 

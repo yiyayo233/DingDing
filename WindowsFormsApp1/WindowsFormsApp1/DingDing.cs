@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using WindowsFormsApp1;
 using CCWin;
+using System.IO;
+using System.Diagnostics;
 
 namespace 钉钉
 {
@@ -68,22 +70,40 @@ namespace 钉钉
         #endregion
 
         #region 号码&密码
+        /// <summary>
+        /// 判断是否已单击密码输入框
+        /// </summary>
+        bool mima = true;
+        /// <summary>
+        /// 判断是否已单击密码输入框
+        /// </summary>
+        bool haoma = true;
+
         private void txt_mima_Enter(object sender, EventArgs e)
         {
-            txt_mima.PasswordChar = char.Parse("*");
             if (txt_mima.Text == "请输入密码")
             {
                 txt_mima.Text = "";
+            }
+            txt_mima.PasswordChar = '*';
+            mima = false;
+            if (txt_haoma.Text == "")
+            {
+                txt_haoma.Text = "请输入手机号";
             }
         }
 
         private void txt_mima_Leave(object sender, EventArgs e)
         {
-            if (txt_mima.Text == "")
+            if (mima)   //移出密码输入框时，如果一单击，则不显示"请输入密码"
             {
-                txt_mima.Text = "请输入密码";
-                txt_mima.PasswordChar = '\0';
+                if (txt_mima.Text == "")
+                {
+                    txt_mima.Text = "请输入密码";
+                    txt_mima.PasswordChar = '\0';
+                }
             }
+            
         }
 
         private void txt_haoma_Enter(object sender, EventArgs e)
@@ -92,14 +112,24 @@ namespace 钉钉
             {
                 txt_haoma.Text = "";
             }
+            haoma = false;
+            if (txt_mima.Text == "")
+            {
+                txt_mima.Text = "请输入密码";
+                txt_mima.PasswordChar = '\0';
+            }
         }
 
         private void txt_haoma_Leave(object sender, EventArgs e)
         {
-            if (txt_haoma.Text == "")
+            if (haoma)  //移出手机号输入框时，如果一单击，则不显示"请输入手机号"
             {
-                txt_haoma.Text = "请输入手机号";
+                if (txt_haoma.Text == "")
+                {
+                    txt_haoma.Text = "请输入手机号";
+                }
             }
+            
         }
         #endregion
 
@@ -133,15 +163,48 @@ namespace 钉钉
                     sql.AppendFormat("select * ");
                     sql.AppendFormat("from Yh ");
                     sql.AppendFormat("where Yh_Sjh='{0}'and Yh_Mm='{1}'",Sjh,Mima);
-                    /*string sql = @"select *
-                                   from Yh
-                                   where Yh_Sjh='" + Sjh + "'and Yh_Mm='" + Mima + "'";*/
                     adapter = new SqlDataAdapter(sql.ToString(), conn);
                     adapter.Fill(dataSet, "yh");
                     if (dataSet.Tables["yh"].Rows.Count > 0)
                     {
                         SysMain sysMain = new SysMain();
                         sysMain.Yh_ld = dataSet.Tables["yh"].Rows[0][0].ToString();
+                        #region 废
+                        /*if (dataSet.Tables["yh"].Rows[0][4] != null)
+                        {
+                            //把二进制数据转换成8位数无符号的整数
+                            Byte[] mybyte = (Byte[])dataSet.Tables["yh"].Rows[0][4];
+                            //再把整数初始化 MemoryStream 类的无法调整大小的新实例
+                            MemoryStream ms = new MemoryStream(mybyte);
+                            sysMain.Yh_Tx = ms;
+
+                            #region 废
+                            *//*string selectTx = @"select Yh_Tx from Yh where Yh_Id = '" + dataSet.Tables["yh"].Rows[0][0].ToString() + "'";
+                            conn.Open();
+                            SqlCommand sqlCommand = new SqlCommand(selectTx, conn);
+                            SqlDataReader dr = sqlCommand.ExecuteReader();
+                            System.Data.SqlTypes.SqlBinary sb;
+                            if (dr.Read())
+                            {
+                                sb = dr.GetSqlBinary(0);
+                            }
+                            conn.Close();
+
+                            if (!sb.IsNull)
+                            {
+                                MemoryStream ms = new MemoryStream(sb.Value);//在内存中操作图片数据   //
+
+                                Bitmap bmp = new Bitmap(Bitmap.FromStream(ms));
+                                sysMain.Yh_Tx = bmp;
+                            }
+                            else
+                            {
+                                sysMain.Yh_Tx = null;
+                            }*//*
+                            #endregion
+                        }*/
+                        #endregion
+                        sysMain.Yh_Tx = null;
                         sysMain.Show();
                         this.Hide();
                     }
@@ -232,6 +295,5 @@ namespace 钉钉
 
 
         #endregion
-
     }
 }

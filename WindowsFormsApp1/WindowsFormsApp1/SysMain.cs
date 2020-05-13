@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinformBubble;
 using 钉钉;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -23,7 +24,11 @@ namespace WindowsFormsApp1
         /// <summary>
         /// 用户ld
         /// </summary>
-        public string Yh_ld = "";
+        public string Yh_ld = "DD20200401";
+        /// <summary>
+        /// 用户头像
+        /// </summary>
+        public MemoryStream Yh_Tx = null;
 
         #region 三大金刚键
         /// <summary>
@@ -207,6 +212,18 @@ namespace WindowsFormsApp1
                 this.frmXiaoTouXiang1.ChuShiHua();
             }
             
+        }
+
+
+        #endregion
+
+        #region 初始化
+        private void SysMain_Load(object sender, EventArgs e)
+        {
+            if (Yh_Tx != null)
+            {
+                pictureBox1.Image = Image.FromStream(Yh_Tx);
+            }
         }
         #endregion
 

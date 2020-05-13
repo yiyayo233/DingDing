@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmXiaoTouXiang));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -46,8 +47,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.PBoxTouXiang = new System.Windows.Forms.PictureBox();
             this.YhName = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.skinPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -56,7 +58,7 @@
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxTouXiang)).BeginInit();
             this.SuspendLayout();
             // 
             // skinPanel1
@@ -239,7 +241,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.PBoxTouXiang);
             this.panel1.Controls.Add(this.YhName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -247,15 +249,18 @@
             this.panel1.Size = new System.Drawing.Size(271, 79);
             this.panel1.TabIndex = 4;
             // 
-            // pictureBox4
+            // PBoxTouXiang
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(166, 16);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.PBoxTouXiang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PBoxTouXiang.Image = ((System.Drawing.Image)(resources.GetObject("PBoxTouXiang.Image")));
+            this.PBoxTouXiang.Location = new System.Drawing.Point(166, 16);
+            this.PBoxTouXiang.Name = "PBoxTouXiang";
+            this.PBoxTouXiang.Size = new System.Drawing.Size(50, 50);
+            this.PBoxTouXiang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBoxTouXiang.TabIndex = 4;
+            this.PBoxTouXiang.TabStop = false;
+            this.toolTip1.SetToolTip(this.PBoxTouXiang, "单击更换头像");
+            this.PBoxTouXiang.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // YhName
             // 
@@ -291,7 +296,7 @@
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxTouXiang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,9 +318,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox PBoxTouXiang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
