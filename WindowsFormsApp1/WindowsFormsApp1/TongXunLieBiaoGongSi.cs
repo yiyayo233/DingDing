@@ -129,6 +129,9 @@ namespace WindowsFormsApp1
             {
                 Control control = this.Parent.Parent.Parent;
                 string s = control.Name;
+                Type type = control.GetType();
+                MethodInfo mi1 = type.GetMethod("CloseAllFrom");
+                mi1.Invoke(control, null);
                 //获得父页面的子控件
                 foreach (var lb in control.Controls)
                 {

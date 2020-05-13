@@ -184,10 +184,8 @@ H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTianJIaHaoYou.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTianJIaQiYe.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTianJiaXiangXiXingXi.resources
-H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTianJiaXiangXiXingXi1.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTongXunLu.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTongXunXiangXiXingXi.resources
-H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmTongXunXiangXiXingXi1.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmXiaoTouXiang.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmXinXi.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmXuanRen.resources
@@ -199,7 +197,6 @@ H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TeBieGuanZhu.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TongXunGongSi.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TongXunHaoYou.resources
-H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TongXunHaoYou1.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TongXunLieBiao.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TongXunLieBiaoGongSi.resources
 H:\GitHub\DingDing\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TongXunQunZu.resources

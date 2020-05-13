@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
         /// <summary>
         /// 关闭全部分组窗口
         /// </summary>
-        private void CloseAllFrom() {
+        public void CloseAllFrom() {
             this.xinDeHaoYou1.Visible = false;
             this.woDeQingZu1.Visible = false;
             this.teBieGuanZhu1.Visible = false;

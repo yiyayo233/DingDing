@@ -124,12 +124,6 @@
     <Compile Include="FrmTianJiaXiangXiXingXi.Designer.cs">
       <DependentUpon>FrmTianJiaXiangXiXingXi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTianJiaXiangXiXingXi1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTianJiaXiangXiXingXi1.Designer.cs">
-      <DependentUpon>FrmTianJiaXiangXiXingXi1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTongXunLu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,12 +135,6 @@
     </Compile>
     <Compile Include="FrmTongXunXiangXiXingXi.Designer.cs">
       <DependentUpon>FrmTongXunXiangXiXingXi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTongXunXiangXiXingXi1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTongXunXiangXiXingXi1.Designer.cs">
-      <DependentUpon>FrmTongXunXiangXiXingXi1.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmXiaoTouXiang.cs">
       <SubType>UserControl</SubType>
@@ -209,12 +197,6 @@
     </Compile>
     <Compile Include="TongXunHaoYou.Designer.cs">
       <DependentUpon>TongXunHaoYou.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TongXunHaoYou1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TongXunHaoYou1.Designer.cs">
-      <DependentUpon>TongXunHaoYou1.cs</DependentUpon>
     </Compile>
     <Compile Include="TongXunLieBiao.cs">
       <SubType>UserControl</SubType>
@@ -309,17 +291,11 @@
     <EmbeddedResource Include="FrmTianJiaXiangXiXingXi.resx">
       <DependentUpon>FrmTianJiaXiangXiXingXi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTianJiaXiangXiXingXi1.resx">
-      <DependentUpon>FrmTianJiaXiangXiXingXi1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmTongXunLu.resx">
       <DependentUpon>FrmTongXunLu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTongXunXiangXiXingXi.resx">
       <DependentUpon>FrmTongXunXiangXiXingXi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTongXunXiangXiXingXi1.resx">
-      <DependentUpon>FrmTongXunXiangXiXingXi1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmXiaoTouXiang.resx">
       <DependentUpon>FrmXiaoTouXiang.cs</DependentUpon>
@@ -360,9 +336,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TongXunHaoYou.resx">
       <DependentUpon>TongXunHaoYou.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TongXunHaoYou1.resx">
-      <DependentUpon>TongXunHaoYou1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TongXunLieBiao.resx">
       <DependentUpon>TongXunLieBiao.cs</DependentUpon>
