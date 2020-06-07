@@ -169,42 +169,15 @@ namespace 钉钉
                     {
                         SysMain sysMain = new SysMain();
                         sysMain.Yh_ld = dataSet.Tables["yh"].Rows[0][0].ToString();
-                        #region 废
-                        /*if (dataSet.Tables["yh"].Rows[0][4] != null)
+                        //判断是否设置了头像
+                        if (dataSet.Tables["yh"].Rows[0][4].ToString().Length != 0)
                         {
-                            //把二进制数据转换成8位数无符号的整数
-                            Byte[] mybyte = (Byte[])dataSet.Tables["yh"].Rows[0][4];
-                            //再把整数初始化 MemoryStream 类的无法调整大小的新实例
-                            MemoryStream ms = new MemoryStream(mybyte);
-                            sysMain.Yh_Tx = ms;
-
-                            #region 废
-                            *//*string selectTx = @"select Yh_Tx from Yh where Yh_Id = '" + dataSet.Tables["yh"].Rows[0][0].ToString() + "'";
-                            conn.Open();
-                            SqlCommand sqlCommand = new SqlCommand(selectTx, conn);
-                            SqlDataReader dr = sqlCommand.ExecuteReader();
-                            System.Data.SqlTypes.SqlBinary sb;
-                            if (dr.Read())
-                            {
-                                sb = dr.GetSqlBinary(0);
-                            }
-                            conn.Close();
-
-                            if (!sb.IsNull)
-                            {
-                                MemoryStream ms = new MemoryStream(sb.Value);//在内存中操作图片数据   //
-
-                                Bitmap bmp = new Bitmap(Bitmap.FromStream(ms));
-                                sysMain.Yh_Tx = bmp;
-                            }
-                            else
-                            {
-                                sysMain.Yh_Tx = null;
-                            }*//*
-                            #endregion
-                        }*/
-                        #endregion
-                        sysMain.Yh_Tx = null;
+                            sysMain.Yh_Tx = dataSet.Tables["yh"].Rows[0][4].ToString();
+                        }
+                        else
+                        {
+                            sysMain.Yh_Tx = UploadFileController.rootPath + "\\user\\mr.png";
+                        }
                         sysMain.Show();
                         this.Hide();
                     }

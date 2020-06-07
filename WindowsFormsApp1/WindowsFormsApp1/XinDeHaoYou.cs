@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                     tongXunHaoYou.txt_HaoYouName = dataSet.Tables["Yh"].Rows[0][1].ToString();
                     tongXunHaoYou.Yh_ld = Yh_ld;
                     tongXunHaoYou.chaZhaoYhld = dataSet.Tables["Yh"].Rows[0][0].ToString();
+                    tongXunHaoYou.chaZhaoYhTX = dataSet.Tables["Yh"].Rows[0][4].ToString();
                     tongXunHaoYou.Dock = DockStyle.Top;
                     string tongXunHaoYouName = "tongXunHaoYou" + i;
                     tongXunHaoYou.Name = tongXunHaoYouName;

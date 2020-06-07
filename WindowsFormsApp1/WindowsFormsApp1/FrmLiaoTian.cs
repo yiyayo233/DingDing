@@ -30,9 +30,19 @@ namespace WindowsFormsApp1
         public string sxld = "";
 
         /// <summary>
+        /// 收信人头像
+        /// </summary>
+        public string sxTx = "";
+
+        /// <summary>
         /// 发送人ld
         /// </summary>
         public string fsld = "";
+
+        /// <summary>
+        /// 发送人头像
+        /// </summary>
+        public string fsTx = "";
 
         /// <summary>
         /// 发送内容
@@ -85,7 +95,7 @@ namespace WindowsFormsApp1
             nr = textBox1.Text;
             if (CheckKong())
             {
-                AddSendMessage(nr,1);
+                AddSendMessage(nr,1,fsTx);
                 TextBox1TextDelete();
          
             }
@@ -99,12 +109,14 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="content">消息内容</param>
         /// <param name="duiHuaRenName">对话人名称</param>
-        private void AddReceiveMessage(string content, string duiHuaRenName)
+        /// <param name="duiHuaRenTx">对话人头像</param>
+        private void AddReceiveMessage(string content, string duiHuaRenName, string duiHuaRenTx)
         {
             Item item = new Item();
             item.messageType = WinformBubble.Item.MessageType.receive;
             item.SetWeChatContent(content);
             item.Text_duiHuaRenName = duiHuaRenName;
+            item.Text_duiHuaRenTx = duiHuaRenTx;
 
             TouXiang touXiang = new TouXiang();
             touXiang.messageType = WinformBubble.TouXiang.MessageType.receive;
@@ -129,7 +141,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="content">消息内容</param>
         /// <param name="pd">判断是否是点击发送</param>
-        private void AddSendMessage(string content,int pd)
+        private void AddSendMessage(string content,int pd,string faSongRenTx)
         {
             SqlConnection sqlConnection = new SqlConnection(strcon);
             try
@@ -161,12 +173,10 @@ namespace WindowsFormsApp1
                         sqlConnection.Close();
                         ShuaXin();
                     }
-                    
                 }
-                
-
                 Item item = new Item();
                 item.messageType = WinformBubble.Item.MessageType.send;
+                item.Yh_Tx = faSongRenTx;
                 item.SetWeChatContent(content);
                 item.Top = top + height;
                 if (pd == 2)
@@ -279,11 +289,11 @@ namespace WindowsFormsApp1
                     {
                         if (dataSet.Tables["XxY"].Rows[i][4].ToString().Equals(fsld))
                         {
-                            AddSendMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(), 2);
+                            AddSendMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(), 2, fsTx);
                         }
                         if (dataSet.Tables["XxY"].Rows[i][4].ToString() != fsld)
                         {
-                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(), "TFDNDSFJIF");
+                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[i][2].ToString(), "TFDNDSFJIF", sxTx);
                         }
                     }
 
@@ -309,7 +319,7 @@ namespace WindowsFormsApp1
                     {
                         if (dataSet.Tables["XxQ"].Rows[i][4].ToString().Equals(fsld))
                         {
-                            AddSendMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), 2);
+                            AddSendMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), 2, fsTx);
                         }
                         else
                         {
@@ -325,7 +335,7 @@ namespace WindowsFormsApp1
 
                             adapter.Fill(dataSet, "FxYh");
 
-                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), dataSet.Tables["FxYh"].Rows[0][1].ToString());
+                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[i][2].ToString(), dataSet.Tables["FxYh"].Rows[0][1].ToString(),sxTx);
                         }
                     }
                 }
@@ -360,14 +370,11 @@ namespace WindowsFormsApp1
                 SqlDataReader sr = sqlCommand.ExecuteReader();
                 while (sr.Read())
                 {
-                    string tx = sr["Yh_Tx"].ToString();
+                    fsTx = sr["Yh_Tx"].ToString();
                 }
-
-
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -405,6 +412,25 @@ namespace WindowsFormsApp1
                     string name = dataSet.Tables["checkSXY"].Rows[0][1].ToString();
                     this.ShuoXinRenName.Text = dataSet.Tables["checkSXY"].Rows[0][1].ToString();
                     this.GongSiName.Text = dataSet.Tables["checkSXY"].Rows[0][1].ToString();
+                    
+                    sxTx = dataSet.Tables["checkSXY"].Rows[0][4].ToString();
+                    if (sxTx.Length != 0)
+                    {
+                        if (sxTx != "null")
+                        {
+                            this.ShouXinRenTx.Load(UploadFileController.rootPath + sxTx);
+                        }
+                        else
+                        {
+                            sxTx = UploadFileController.rootPath + "\\user\\mr.png";
+                            this.ShouXinRenTx.Load(sxTx);
+                        }
+                    }
+                    else
+                    {
+                        sxTx = UploadFileController.rootPath + "\\user\\mr.png";
+                        this.ShouXinRenTx.Load(sxTx);
+                    }
                 }
                 else
                 {
@@ -422,6 +448,24 @@ namespace WindowsFormsApp1
                     string name = dataSet.Tables["checkSXQ"].Rows[0][1].ToString();
                     this.ShuoXinRenName.Text = dataSet.Tables["checkSXQ"].Rows[0][1].ToString();
                     this.GongSiName.Text = dataSet.Tables["checkSXQ"].Rows[0][1].ToString();
+                    sxTx = dataSet.Tables["checkSXQ"].Rows[0][2].ToString();
+                    if (sxTx.Length != 0)
+                    {
+                        if (sxTx != "null")
+                        {
+                            this.ShouXinRenTx.Load(UploadFileController.rootPath + sxTx);
+                        }
+                        else
+                        {
+                            sxTx = UploadFileController.rootPath + "\\user\\mr.png";
+                            this.ShouXinRenTx.Load(sxTx);
+                        }
+                    }
+                    else
+                    {
+                        sxTx = UploadFileController.rootPath + "\\user\\mr.png";
+                        this.ShouXinRenTx.Load(sxTx);
+                    }
                 }
             }
             catch (Exception)
@@ -529,7 +573,7 @@ namespace WindowsFormsApp1
                         if (!dataSet.Tables["XxY"].Rows[index - 1][4].ToString().Equals(fsld))
                         {
                             //添加新的气泡
-                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[index - 1][2].ToString(), "TFDNDSFJIF");
+                            AddReceiveMessage(dataSet.Tables["XxY"].Rows[index - 1][2].ToString(), "TFDNDSFJIF","null");
                         }
                         indexY++;   //加载消息总数自增
                     }
@@ -567,7 +611,7 @@ namespace WindowsFormsApp1
 
                             adapter.Fill(dataSet, "FxYh");
 
-                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[index - 1][2].ToString(), dataSet.Tables["FxYh"].Rows[0][1].ToString());
+                            AddReceiveMessage(dataSet.Tables["XxQ"].Rows[index - 1][2].ToString(), dataSet.Tables["FxYh"].Rows[0][1].ToString(), dataSet.Tables["FxYh"].Rows[0][4].ToString());
                         }
                         indexQ++;
                     }

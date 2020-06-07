@@ -50,6 +50,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -72,6 +74,8 @@
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.skinPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.skinContextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.YeMian.SuspendLayout();
@@ -393,6 +397,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.skinPanel1);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -405,6 +410,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(70, 679);
             this.panel1.TabIndex = 0;
+            // 
+            // skinPanel1
+            // 
+            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel1.Controls.Add(this.pictureBox2);
+            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel1.DownBack = null;
+            this.skinPanel1.Location = new System.Drawing.Point(3, 427);
+            this.skinPanel1.MouseBack = null;
+            this.skinPanel1.Name = "skinPanel1";
+            this.skinPanel1.NormlBack = null;
+            this.skinPanel1.Radius = 60;
+            this.skinPanel1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinPanel1.Size = new System.Drawing.Size(60, 60);
+            this.skinPanel1.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
             // button5
             // 
@@ -638,6 +671,8 @@
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.skinPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.skinContextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.YeMian.ResumeLayout(false);
@@ -676,12 +711,14 @@
         private System.Windows.Forms.ToolStripMenuItem 请假ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 更多ToolStripMenuItem;
         private System.Windows.Forms.Panel YeMian;
-        private FrmTongXunLu frmTongXunLu1;  //
+        private FrmTongXunLu frmTongXunLu1;
         private FrmXinXi frmXinXi1;
         private FrmChuShi frmChuShi1;
         private FrmGongZuo frmGongZuo1;
         private FrmQingJia frmQingJia1;
         private FrmKaoQin frmKaoQin1;
         private FrmXiaoTouXiang frmXiaoTouXiang1;
+        private CCWin.SkinControl.SkinPanel skinPanel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

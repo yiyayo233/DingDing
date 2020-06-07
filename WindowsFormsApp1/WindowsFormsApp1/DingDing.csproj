@@ -154,6 +154,7 @@
     <Compile Include="FrmXuanRen.Designer.cs">
       <DependentUpon>FrmXuanRen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UploadFileController.cs" />
     <Compile Include="HuiHuaLieBiao.cs">
       <SubType>UserControl</SubType>
     </Compile>

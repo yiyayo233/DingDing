@@ -105,6 +105,7 @@ namespace WindowsFormsApp1
                     #region 初始化控件&添加
                     HuiHuaLieBiao huiHuaLieBiao = new HuiHuaLieBiao();
                     huiHuaLieBiao.txt_ShouXinName = dataSet.Tables["Yh"].Rows[0][1].ToString();
+                    huiHuaLieBiao.Yh_Tx = dataSet.Tables["Yh"].Rows[0][4].ToString();
                     if (dataSet.Tables["Xx"].Rows.Count != 0)
                     {
                         string XiaoXi = dataSet.Tables["Xx"].Rows[0][2].ToString();
@@ -399,6 +400,7 @@ namespace WindowsFormsApp1
                     #region 初始化控件&添加
                     HuiHuaLieBiao huiHuaLieBiao = new HuiHuaLieBiao();
                     huiHuaLieBiao.txt_ShouXinName = dataSet.Tables["Yh"].Rows[0][1].ToString();
+                    huiHuaLieBiao.Yh_Tx = dataSet.Tables["Yh"].Rows[0][4].ToString();
                     if (dataSet.Tables["Xx"].Rows.Count != 0)
                     {
                         string XiaoXi = dataSet.Tables["Xx"].Rows[0][2].ToString();

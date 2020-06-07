@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
             this.lblContent = new System.Windows.Forms.Label();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
@@ -36,10 +37,12 @@
             this.日程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.代办ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DuiHuaRenName = new System.Windows.Forms.Label();
-            this.touXiangBG = new WinformBubble.TouXiang();
-            this.touXiangZJ = new WinformBubble.TouXiang();
+            this.touXiangBG = new System.Windows.Forms.PictureBox();
+            this.touXiangZJ = new System.Windows.Forms.PictureBox();
             this.skinPanel1.SuspendLayout();
             this.skinContextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.touXiangBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touXiangZJ)).BeginInit();
             this.SuspendLayout();
             // 
             // lblContent
@@ -148,18 +151,26 @@
             // 
             // touXiangBG
             // 
+            this.touXiangBG.ErrorImage = null;
+            this.touXiangBG.Image = ((System.Drawing.Image)(resources.GetObject("touXiangBG.Image")));
             this.touXiangBG.Location = new System.Drawing.Point(15, 8);
             this.touXiangBG.Name = "touXiangBG";
             this.touXiangBG.Size = new System.Drawing.Size(40, 40);
-            this.touXiangBG.TabIndex = 9;
+            this.touXiangBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.touXiangBG.TabIndex = 11;
+            this.touXiangBG.TabStop = false;
             this.touXiangBG.Visible = false;
             // 
             // touXiangZJ
             // 
+            this.touXiangZJ.ErrorImage = null;
+            this.touXiangZJ.Image = ((System.Drawing.Image)(resources.GetObject("touXiangZJ.Image")));
             this.touXiangZJ.Location = new System.Drawing.Point(93, 21);
             this.touXiangZJ.Name = "touXiangZJ";
             this.touXiangZJ.Size = new System.Drawing.Size(40, 40);
-            this.touXiangZJ.TabIndex = 8;
+            this.touXiangZJ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.touXiangZJ.TabIndex = 11;
+            this.touXiangZJ.TabStop = false;
             this.touXiangZJ.Visible = false;
             // 
             // Item
@@ -167,9 +178,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.DuiHuaRenName);
-            this.Controls.Add(this.touXiangBG);
             this.Controls.Add(this.touXiangZJ);
+            this.Controls.Add(this.touXiangBG);
+            this.Controls.Add(this.DuiHuaRenName);
             this.Controls.Add(this.skinPanel1);
             this.Name = "Item";
             this.Padding = new System.Windows.Forms.Padding(5, 10, 10, 5);
@@ -177,6 +188,8 @@
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
             this.skinContextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.touXiangBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.touXiangZJ)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,8 +204,8 @@
         private System.Windows.Forms.ToolStripMenuItem 粘贴ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 日程ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 代办ToolStripMenuItem;
-        private TouXiang touXiangZJ;
-        private TouXiang touXiangBG;
         private System.Windows.Forms.Label DuiHuaRenName;
+        private System.Windows.Forms.PictureBox touXiangBG;
+        private System.Windows.Forms.PictureBox touXiangZJ;
     }
 }

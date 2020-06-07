@@ -35,7 +35,6 @@ namespace WindowsFormsApp1
         /// <summary>
         /// 用户id
         /// </summary>
-
         public string Yh_ld = "";
         /// <summary>
         /// 好友名称
@@ -45,6 +44,10 @@ namespace WindowsFormsApp1
         /// 好友id
         /// </summary>
         public string chaZhaoYhld = "";
+        /// <summary>
+        /// 好友头像
+        /// </summary>
+        public string chaZhaoYhTX = "";
 
         private void TongXunHaoYou_Load(object sender, EventArgs e)
         {
@@ -103,13 +106,16 @@ namespace WindowsFormsApp1
             {
                 if (lb is Label)
                 {
-                    Label obj = lb as Label;   //如果把循环改成这样就可以省略这一步foreach(Label lb in mi_image1.Controls)
-                                               //MessageBox.Show("哈哈哈，我找到用户控件里的控件对象啦"+obj.Name);
+                    Label obj = lb as Label;   
                     if (obj.Name == "Txt_HaoYouName")
                     {
                         obj.Text = txt_HaoYouName;
                     }
                 }
+            }
+            if (chaZhaoYhTX.Length != 0)
+            {
+                this.pictureBox_Top.Load(UploadFileController.rootPath + chaZhaoYhTX);
             }
         }
         #endregion

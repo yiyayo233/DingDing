@@ -140,6 +140,10 @@ namespace WindowsFormsApp1
                 adapter.Fill(dataSet, "Yh");
 
                 this.HyName.Text = dataSet.Tables["Yh"].Rows[0][1].ToString();
+                if (dataSet.Tables["Yh"].Rows[0][4].ToString().Length != 0)
+                {
+                    this.pictureBox1.Load(UploadFileController.rootPath + dataSet.Tables["Yh"].Rows[0][4].ToString());
+                }
                 this.HyName2.Text = dataSet.Tables["Yh"].Rows[0][1].ToString();
                 this.Hyld.Text = dataSet.Tables["Yh"].Rows[0][0].ToString();
                 this.BeiZhu.Text = dataSet.Tables["Yh"].Rows[0][1].ToString();

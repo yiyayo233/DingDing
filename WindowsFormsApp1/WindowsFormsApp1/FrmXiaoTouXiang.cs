@@ -29,6 +29,10 @@ namespace WindowsFormsApp1
         /// 用户id
         /// </summary>
         public string Yh_ld = "";
+        /// <summary>
+        /// 用户头像
+        /// </summary>
+        public string Yh_Tx = "";
 
         #region 初始化
         /// <summary>
@@ -50,6 +54,7 @@ namespace WindowsFormsApp1
                 adapter.Fill(dataSet,"yh");
 
                 this.YhName.Text = dataSet.Tables["yh"].Rows[0][1].ToString().Trim();
+                this.PBoxTouXiang.Load(UploadFileController.rootPath + Yh_Tx);
             }
             catch (Exception)
             {
@@ -208,65 +213,7 @@ namespace WindowsFormsApp1
         #region 更换头像
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            UpdateTouXiang();
-        }
-
-        /// <summary>
-        /// 更换头像
-        /// <para>实现方法：通过 OpenFileDialog 对象获取图片位置</para>
-        /// </summary>
-        public void UpdateTouXiang() {
-            SqlConnection connection = new SqlConnection(strconn);
-            try
-            {
-                OpenFileDialog of = new OpenFileDialog();
-                //多选文件
-                of.Multiselect = false;
-                of.Title = "请选择图片文件";
-                //文件属性
-                //of.Filter = "(*.mp3)|*.mp3";
-                
-                //图片路径
-                string picturePath = null;
-                //确定用户选择的是确认按钮
-                if (of.ShowDialog() == DialogResult.OK)
-                {
-                    //图片路径
-                    picturePath = of.FileNames[0].Trim();
-
-                    StringBuilder updateTouXiang = new StringBuilder();
-                    updateTouXiang.AppendFormat("update Yh set Yh_Tx = '@blobdata' ");
-                    updateTouXiang.AppendFormat("where Yh_Id = '{0}'", Yh_ld);
-
-                    SqlCommand command = new SqlCommand(updateTouXiang.ToString(), connection);
-
-                    //文件的名称，每次必须更换图片的名称，这里很为不便
-                    //创建FileStream对象
-                    FileStream fs = new FileStream(picturePath, FileMode.Open, FileAccess.Read);
-                    //声明Byte数组
-                    Byte[] mybyte = new byte[fs.Length];
-                    //读取数据
-                    fs.Read(mybyte, 0, mybyte.Length);
-                    fs.Close();
-                    //转换成二进制数据，并保存到数据库
-                    SqlParameter prm = new SqlParameter
-                  ("@blobdata", SqlDbType.VarBinary, mybyte.Length, ParameterDirection.Input, false, 0, 0, null, DataRowVersion.Current, mybyte);
-                    command.Parameters.Add(prm);
-                    //打开数据库连接
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    connection.Close();
-
-                    #region 刷新头像
-                    MemoryStream ms = new MemoryStream(mybyte);
-                    PBoxTouXiang.Image = Image.FromStream(ms);
-                    #endregion
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            UploadFileController.UploadHeadPortrait(Yh_ld);
         }
         #endregion
     }

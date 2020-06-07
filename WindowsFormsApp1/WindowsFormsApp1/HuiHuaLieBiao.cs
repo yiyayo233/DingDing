@@ -23,6 +23,11 @@ namespace WindowsFormsApp1
         public string Yh_ld = "";
 
         /// <summary>
+        /// 用户头像
+        /// </summary>
+        public string Yh_Tx = "";
+
+        /// <summary>
         /// 对话人昵称
         /// </summary>
         public string txt_ShouXinName = "";
@@ -41,6 +46,11 @@ namespace WindowsFormsApp1
         /// 对话人id
         /// </summary>
         public string sxld = "";
+
+        /// <summary>
+        /// 对话人头像
+        /// </summary>
+        public string sxTx = "";
 
         #region 改变 HuiHuaLieBiao 背景颜色
         private void HuiHuaLieBiao_MouseDown(object sender, MouseEventArgs e)
@@ -109,6 +119,10 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            if (Yh_Tx.Length != 0)
+            {
+                this.pictureBox1.Load(UploadFileController.rootPath + Yh_Tx);
+            }
 
         }
 
@@ -145,7 +159,9 @@ namespace WindowsFormsApp1
                                             if (obj2.Name == "frmLiaoTian1")
                                             {
                                                 obj2.fsld = Yh_ld;
+                                                obj2.fsTx = Yh_Tx;
                                                 obj2.sxld = sxld;
+                                                obj2.sxTx = sxTx;
                                                 obj2.i = 1;
                                                 if (obj2.Visible == true)
                                                 {

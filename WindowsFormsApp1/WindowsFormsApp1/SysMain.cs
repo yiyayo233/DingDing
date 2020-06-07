@@ -24,11 +24,11 @@ namespace WindowsFormsApp1
         /// <summary>
         /// 用户ld
         /// </summary>
-        public string Yh_ld = "DD20200401";
+        public string Yh_ld = "";
         /// <summary>
         /// 用户头像
         /// </summary>
-        public MemoryStream Yh_Tx = null;
+        public string Yh_Tx = "";
 
         #region 三大金刚键
         /// <summary>
@@ -196,6 +196,7 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.frmXiaoTouXiang1.Yh_Tx = Yh_Tx;
             if (this.frmGongZuo1.Visible == true)
             {
                 this.frmGongZuo1.Visible = false;
@@ -220,10 +221,7 @@ namespace WindowsFormsApp1
         #region 初始化
         private void SysMain_Load(object sender, EventArgs e)
         {
-            if (Yh_Tx != null)
-            {
-                pictureBox1.Image = Image.FromStream(Yh_Tx);
-            }
+            this.pictureBox1.Load(UploadFileController.rootPath + Yh_Tx);
         }
         #endregion
 

@@ -42,8 +42,6 @@ namespace WindowsFormsApp1
         }
         private TongXunGongSi paf1;
 
-
-
         static string strcon = "Data Source=.;Initial Catalog=DingDing;Integrated Security=True";
         DataSet dataSet = new DataSet();
         SqlDataAdapter adapter = new SqlDataAdapter();
@@ -142,7 +140,10 @@ namespace WindowsFormsApp1
 
                 this.HyName.Text = dataSet.Tables["Yh"].Rows[0][1].ToString();
                 this.XingMing.Text = dataSet.Tables["Yh"].Rows[0][1].ToString();
-                /*this.HyName.Text = dataSet.Tables["Yh"].Rows[0][2].ToString();*/
+                if (dataSet.Tables["Yh"].Rows[0][4].ToString().Length != 0)
+                {
+                    this.pictureBox1.Load(UploadFileController.rootPath + dataSet.Tables["Yh"].Rows[0][4].ToString());
+                }
                 this.DianHua.Text = dataSet.Tables["Yh"].Rows[0][3].ToString();
                 this.HyName2.Text = dataSet.Tables["Yh"].Rows[0][1].ToString();
                 this.Hyld.Text = dataSet.Tables["Yh"].Rows[0][0].ToString();

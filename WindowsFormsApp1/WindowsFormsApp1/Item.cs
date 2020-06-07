@@ -40,6 +40,15 @@ namespace WinformBubble
         /// </summary>
         public string Text_duiHuaRenName = "";
 
+        /// <summary>
+        /// 对话人头像
+        /// </summary>
+        public string Text_duiHuaRenTx = "";
+
+        /// <summary>
+        /// 用户头像
+        /// </summary>
+        public string Yh_Tx = "";
 
         public Item()
         {
@@ -65,12 +74,27 @@ namespace WinformBubble
             if (messageType == MessageType.send)
             {
                 this.touXiangZJ.Visible = true;
+                if (Yh_Tx.Length != 0)
+                {
+                    if (Yh_Tx != "null")
+                    {
+                        this.touXiangZJ.Load(WindowsFormsApp1.UploadFileController.rootPath + Yh_Tx);
+                    }
+                    
+                }
             }
             else
             {
                 this.skinPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                 this.skinPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                 this.touXiangBG.Visible = true;
+                if (Text_duiHuaRenTx.Length != 0)
+                {
+                    if (Text_duiHuaRenTx != "null")
+                    {
+                        this.touXiangBG.Load(WindowsFormsApp1.UploadFileController.rootPath + Text_duiHuaRenTx);
+                    }
+                }
                 if (Text_duiHuaRenName == "TFDNDSFJIF")
                 {
                     this.touXiangBG.Top = 21;
